@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F2A6C053-47DD-ACE9-A209-81F2681AFC59}</ProjectGuid>
+    <ProjectGuid>{70BA0918-362A-F861-1370-89636AE09879}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>SteamVR_Editor</AssemblyName>
@@ -56,16 +56,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UpdateModeEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_SkyboxEditor.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR_2018to2019.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR_2019plus.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Update.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_UnitySettingsWindow.cs" />
-    <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_Update.cs" />
     <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR_5.4to2018.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_UpdateModeEditor.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR_2018to2019.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_Preferences.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_Editor.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_SkyboxEditor.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_UnitySettingsWindow.cs" />
+    <Compile Include="Assets\SteamVR\Editor\SteamVR_AutoEnableVR_2019plus.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\SteamVR\Editor\SteamVR_Editor.asmdef" />
@@ -684,7 +684,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SteamVR.csproj">
-      <Project>{122F4BC1-23CA-9920-D51D-9D59B3585286}</Project>
+      <Project>{94055D48-337C-AB95-AF00-42950256E8F4}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
   </ItemGroup>
