@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class HitboxManager : MonoBehaviour
 {
-    public GameObject leftElbow;
+    /*public GameObject leftElbow;
     public GameObject rightElbow;
     public GameObject rightAnkle;
     public GameObject leftAnkle;
-    public GameObject leftHand;
-    public GameObject rightHand;
+    public GameObject leftHand;*/
+    public GameObject hand;
+    public GameObject headset;
 
     public Object fireball;
     private bool isPunch = false;
@@ -23,8 +24,8 @@ public class HitboxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dist = Vector3.Distance(rightHand.GetComponent<Transform>().position, rightElbow.GetComponent<Transform>().position);
-        Debug.Log(dist);
+        /*float dist = Vector3.Distance(rightHand.GetComponent<Transform>().position, rightElbow.GetComponent<Transform>().position);
+        //Debug.Log(dist);
         if (HandUp(rightHand, rightElbow, 1))
         {
             //Debug.Log("Hand Up");
@@ -61,6 +62,52 @@ public class HitboxManager : MonoBehaviour
         } else
         {
             
+        }*/
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Collision");
+        
+        if (other.gameObject.name == "Punch")
+        {
+            //If the GameObject's name matches the one you suggest, output this message in the console
+            Debug.Log("detected Punch name");
+        }
+
+        //Check for a match with the specific tag on any GameObject that collides with your GameObject
+        if (other.gameObject.tag == "punchBlock" && isPunch == false)
+        {
+            //If the GameObject has the same tag as specified, output this message in the console
+            Debug.Log("Fireball!!");
+            isPunch = true;
+            ThrowFireball(fireball, hand, headset);
+        }
+        if (other.gameObject.tag == "wallOfFire")
+        {
+            
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Collision");
+
+        if (other.gameObject.name == "Punch")
+        {
+            //If the GameObject's name matches the one you suggest, output this message in the console
+            Debug.Log("detected Punch name");
+        }
+
+        //Check for a match with the specific tag on any GameObject that collides with your GameObject
+        if (other.gameObject.tag == "punchBlock" && isPunch == true)
+        {
+            Debug.Log("Reload");
+            isPunch = false;
+        }
+        if (other.gameObject.tag == "wallOfFire")
+        {
+           
         }
     }
 
