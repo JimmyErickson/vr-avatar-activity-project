@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -504,6 +504,10 @@ PrefabInstance:
       propertyPath: fireWall
       value: 
       objectReference: {fileID: 9094417625917551262, guid: 4265f7244ad399c428b95f36520c4c62, type: 3}
+    - target: {fileID: 283270695, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: fireball
+      value: 
+      objectReference: {fileID: 3080358681952016791, guid: 8890626d3a3ed31419ba04957551648b, type: 3}
     - target: {fileID: 366167639, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -520,6 +524,10 @@ PrefabInstance:
       propertyPath: fireWall
       value: 
       objectReference: {fileID: 9094417625917551262, guid: 4265f7244ad399c428b95f36520c4c62, type: 3}
+    - target: {fileID: 453525447, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: fireball
+      value: 
+      objectReference: {fileID: 3080358681952016791, guid: 8890626d3a3ed31419ba04957551648b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
 --- !u!1 &1613293935
