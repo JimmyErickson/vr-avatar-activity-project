@@ -71,7 +71,7 @@ public class HitboxManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision");
+        //Debug.Log("Collision");
         
         if (other.gameObject.name == "Punch")
         {
@@ -89,17 +89,25 @@ public class HitboxManager : MonoBehaviour
         }
         if (other.gameObject.tag == "wallOfFire" && ComboTracker.Instance.wallReload == true)
         {
+            Debug.Log("Wall Hit!!");
             ComboTracker.Instance.wallCheck++;
             if(ComboTracker.Instance.wallCheck == 2){
+                Debug.Log("FireWall!!!!!!!!!!!!");
                 CreateWall(fireWall, hand, headset);
                 ComboTracker.Instance.wallReload = false;
             }
+        }
+        if (other.gameObject.tag == "FootOut")
+        {
+            
+            Debug.Log("Kick!!");
+            
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        Debug.Log("Collision");
+        //Debug.Log("Collision");
 
         if (other.gameObject.name == "Punch")
         {
@@ -110,11 +118,12 @@ public class HitboxManager : MonoBehaviour
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
         if (other.gameObject.tag == "punchBlock" && isPunch == true)
         {
-            Debug.Log("Reload");
+            Debug.Log("Reload Punch");
             isPunch = false;
         }
         if (other.gameObject.tag == "wallOfFire")
         {
+            Debug.Log("Reload Wall");
            ComboTracker.Instance.wallCheck--;
            ComboTracker.Instance.wallReload = true;
         }
@@ -122,15 +131,23 @@ public class HitboxManager : MonoBehaviour
 
     static public void CreateWall(Object wallObject, GameObject hand, GameObject headset){
         float diff = hand.GetComponent<Transform>().position.z - headset.GetComponent<Transform>().position.z;
-        float direction = headset.GetComponent<Transform>().rotation.y;
+        float direction = headset.GetComponent<Transform>().eulerAngles.y;
+        Debug.Log(direction);
         //new fireball.transform.addVelocity(diff);
-        GameObject wall = (GameObject)Instantiate(wallObject, hand.GetComponent<Transform>().position, headset.GetComponent<Transform>().rotation);
-        wall.GetComponent<Transform>().eulerAngles = new Vector3(0, direction, 0);
+        
+        //wall.GetComponent<Transform>().eulerAngles = new Vector3(0, direction, 0);
         //wall.GetComponent<Transform>().rotation.x = 0;
         //wall.GetComponent<Transform>().rotation.y = direction;
         //wall.GetComponent<Transform>().rotation.z = 0;
         Vector3 displacement = new Vector3(0, 0, diff);
-        wall.GetComponent<Rigidbody>().position = headset.GetComponent<Transform>().position + (displacement * 3);
+        //wall.GetComponent<Transform>().parent = headset.GetComponent<Transform>();
+        Vector3 thePosition = headset.GetComponent<Transform>().TransformPoint(Vector3.forward * 5 / 2);
+        
+        //wall.GetComponent<Transform>().localPosition = thePosition;
+        //headset.GetComponent<Transform>().localPosition + (displacement * 3);
+        GameObject wall = (GameObject)Instantiate(wallObject, thePosition, Quaternion.Euler(-90, direction, 0));
+        wall.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        wall.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     static public void ThrowFireball(Object fireball, GameObject hand, GameObject headset)
