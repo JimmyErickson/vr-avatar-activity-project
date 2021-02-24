@@ -503,7 +503,7 @@ PrefabInstance:
     - target: {fileID: 283270695, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: fireWall
       value: 
-      objectReference: {fileID: 9094417625917551262, guid: 4265f7244ad399c428b95f36520c4c62, type: 3}
+      objectReference: {fileID: 5577566431766585970, guid: 5c82475deabe3f94994055125faf4774, type: 3}
     - target: {fileID: 283270695, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: fireball
       value: 
@@ -523,7 +523,7 @@ PrefabInstance:
     - target: {fileID: 453525447, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: fireWall
       value: 
-      objectReference: {fileID: 9094417625917551262, guid: 4265f7244ad399c428b95f36520c4c62, type: 3}
+      objectReference: {fileID: 5577566431766585970, guid: 5c82475deabe3f94994055125faf4774, type: 3}
     - target: {fileID: 453525447, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: fireball
       value: 

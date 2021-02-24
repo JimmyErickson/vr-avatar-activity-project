@@ -1,0 +1,155 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.3f1 (8ff31bc5bf5b) revision 9433883'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19042.746; Version 2009; 64bit' Language: 'en' Physical Memory: 16276 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+58999
+Successfully changed project path to: C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar
+C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 32.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.3f1 (8ff31bc5bf5b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon Pro 5300M (ID=0x7340)
+    Vendor:   
+    VRAM:     4054 MB
+    Driver:   27.20.11036.1002
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001823 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 28.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.968 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002553 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.782 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1435 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.3 MB.
+System memory in use after: 71.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1882.
+Total: 1.725900 ms (FindLiveObjects: 0.161300 ms CreateObjectMapping: 0.086200 ms MarkObjects: 1.402900 ms  DeleteObjects: 0.074600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Textures
+  artifactKey: Guid(fb801f49b8f306741b9beb617f19b482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(fb801f49b8f306741b9beb617f19b482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04802f07dc376a3c9a22fee1ada5a080') in 0.007657 seconds
+  Import took 0.009956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.110648 seconds.
+  path: Assets/Textures/TextureFire.png
+  artifactKey: Guid(0445b0b622e186d4c8605c4e65f6b3fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/TextureFire.png using Guid(0445b0b622e186d4c8605c4e65f6b3fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa8339936cce54d279e590164a0a69eb') in 0.104320 seconds
+  Import took 0.106803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.901815 seconds.
+  path: Assets/Materials/TextureFire.mat
+  artifactKey: Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TextureFire.mat using Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6103769001776c4b8d8798ba5343cc41') in 0.101480 seconds
+  Import took 0.104474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003344 seconds.
+  path: Assets/Materials/TextureFire.mat
+  artifactKey: Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TextureFire.mat using Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6103769001776c4b8d8798ba5343cc41') in 0.013627 seconds
+  Import took 0.016408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.475656 seconds.
+  path: Assets/Prefabs/fireWallCube.prefab
+  artifactKey: Guid(4265f7244ad399c428b95f36520c4c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/fireWallCube.prefab using Guid(4265f7244ad399c428b95f36520c4c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff4af31ce0752633b4509031ad229f2c') in 0.033427 seconds
+  Import took 0.035760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.085930 seconds.
+  path: Assets/Prefabs/Fireball.prefab
+  artifactKey: Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Fireball.prefab using Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d126cb2fce535c5c44150084087a574') in 0.010046 seconds
+  Import took 0.012569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015852 seconds.
+  path: Assets/Prefabs/Fireball.prefab
+  artifactKey: Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Fireball.prefab using Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d126cb2fce535c5c44150084087a574') in 0.004540 seconds
+  Import took 0.007014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.134741 seconds.
+  path: Assets/Materials/TextureFire.mat
+  artifactKey: Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TextureFire.mat using Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b1997b3497a4cedbeb784cafcda7dc') in 0.017434 seconds
+  Import took 0.019866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003688 seconds.
+  path: Assets/Materials/TextureFire.mat
+  artifactKey: Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/TextureFire.mat using Guid(d61db07ea4302a64a991104067934ef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3b1997b3497a4cedbeb784cafcda7dc') in 0.015644 seconds
+  Import took 0.018614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.848167 seconds.
+  path: Assets/Prefabs/Fireball.prefab
+  artifactKey: Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Fireball.prefab using Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0beee20df6508ee5253b42699457e0') in 0.005280 seconds
+  Import took 0.008504 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
