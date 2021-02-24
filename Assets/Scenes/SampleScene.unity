@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -500,6 +500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 283270695, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: fireWall
+      value: 
+      objectReference: {fileID: 9094417625917551262, guid: 4265f7244ad399c428b95f36520c4c62, type: 3}
     - target: {fileID: 366167639, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -512,6 +516,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 453525447, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: fireWall
+      value: 
+      objectReference: {fileID: 9094417625917551262, guid: 4265f7244ad399c428b95f36520c4c62, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
 --- !u!1 &1613293935
@@ -523,8 +531,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1613293937}
-  - component: {fileID: 1613293936}
-  - component: {fileID: 1613293938}
   m_Layer: 0
   m_Name: HitboxManager
   m_TagString: Untagged
@@ -532,21 +538,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1613293936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613293935}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33bf16c8a9a28642bf91769885652a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hand: {fileID: 0}
-  headset: {fileID: 0}
-  fireball: {fileID: 8512777326810096692, guid: d5a3bdcfe9066d44d90e99c7343bfd95, type: 3}
 --- !u!4 &1613293937
 Transform:
   m_ObjectHideFlags: 0
@@ -561,15 +552,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1613293938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613293935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bebe0d590f5fb914084a7c628fa6395a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

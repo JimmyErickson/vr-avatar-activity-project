@@ -15,6 +15,10 @@ public class HitboxManager : MonoBehaviour
     public Object fireball;
     private bool isPunch = false;
 
+    public Object fireWall;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,9 +87,13 @@ public class HitboxManager : MonoBehaviour
             isPunch = true;
             ThrowFireball(fireball, hand, headset);
         }
-        if (other.gameObject.tag == "wallOfFire")
+        if (other.gameObject.tag == "wallOfFire" && ComboTracker.Instance.wallReload == true)
         {
-            
+            ComboTracker.Instance.wallCheck++;
+            if(ComboTracker.Instance.wallCheck == 2){
+                CreateWall(fireWall, hand, headset);
+                ComboTracker.Instance.wallReload = false;
+            }
         }
     }
 
@@ -107,8 +115,31 @@ public class HitboxManager : MonoBehaviour
         }
         if (other.gameObject.tag == "wallOfFire")
         {
-           
+           ComboTracker.Instance.wallCheck--;
+           ComboTracker.Instance.wallReload = true;
         }
+    }
+
+    static public void CreateWall(Object wallObject, GameObject hand, GameObject headset){
+        float diff = hand.GetComponent<Transform>().position.z - headset.GetComponent<Transform>().position.z;
+        float direction = headset.GetComponent<Transform>().rotation.y;
+        //new fireball.transform.addVelocity(diff);
+        GameObject wall = (GameObject)Instantiate(wallObject, hand.GetComponent<Transform>().position, headset.GetComponent<Transform>().rotation);
+        wall.GetComponent<Transform>().eulerAngles = new Vector3(0, direction, 0);
+        //wall.GetComponent<Transform>().rotation.x = 0;
+        //wall.GetComponent<Transform>().rotation.y = direction;
+        //wall.GetComponent<Transform>().rotation.z = 0;
+        Vector3 displacement = new Vector3(0, 0, diff);
+        wall.GetComponent<Rigidbody>().position = headset.GetComponent<Transform>().position + (displacement * 3);
+    }
+
+    static public void ThrowFireball(Object fireball, GameObject hand, GameObject headset)
+    {
+        Vector3 diff = hand.GetComponent<Transform>().position - headset.GetComponent<Transform>().position;
+        //new fireball.transform.addVelocity(diff);
+        GameObject fire = (GameObject)Instantiate(fireball, hand.GetComponent<Transform>().position, hand.GetComponent<Transform>().rotation);
+        fire.GetComponent<Rigidbody>().velocity = diff*20;
+   
     }
 
     static public bool HandOut(GameObject hand, GameObject elbow, double n)
@@ -212,12 +243,5 @@ public class HitboxManager : MonoBehaviour
         return false;
     }
 
-    static public void ThrowFireball(Object fireball, GameObject hand, GameObject elbow)
-    {
-        Vector3 diff = hand.GetComponent<Transform>().position - elbow.GetComponent<Transform>().position;
-        //new fireball.transform.addVelocity(diff);
-        GameObject fire = (GameObject)Instantiate(fireball, hand.GetComponent<Transform>().position, hand.GetComponent<Transform>().rotation);
-        fire.GetComponent<Rigidbody>().velocity = diff*20;
-   
-    }
+    
 }
