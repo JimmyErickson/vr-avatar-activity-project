@@ -1,601 +1,211 @@
 Using pre-set license
-Built from '2020.2/release' branch; Version is '2020.2.4f1 (becced5a802b) revision 12504301'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Education; OS build 19042.804; Version 2009; 64bit' Language: 'en' Physical Memory: 32652 MB
+Built from '2020.2/staging' branch; Version is '2020.2.3f1 (8ff31bc5bf5b) revision 9433883'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19042.746; Version 2009; 64bit' Language: 'en' Physical Memory: 16276 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-G:\Unity Installs\2020.2.4f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.2.3f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-G:/Unity Projects/vr-module3-avatar
+C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63149
-Successfully changed project path to: G:/Unity Projects/vr-module3-avatar
-G:/Unity Projects/vr-module3-avatar
+51297
+Successfully changed project path to: C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar
+C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 40.98 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 48.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.2.4f1 (becced5a802b)
-[Subsystems] Discovering subsystems at path G:/Unity Installs/2020.2.4f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path G:/Unity Projects/vr-module3-avatar/Assets
+Initialize engine version: 2020.2.3f1 (8ff31bc5bf5b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Josiah/Desktop/VirtualWorlds/vr-module3-avatar/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f07)
+    Renderer: AMD Radeon Pro 5300M (ID=0x7340)
     Vendor:   
-    VRAM:     8031 MB
-    Driver:   27.21.14.5671
+    VRAM:     4054 MB
+    Driver:   27.20.11036.1002
 Initialize mono
-Mono path[0] = 'G:/Unity Installs/2020.2.4f1/Editor/Data/Managed'
-Mono path[1] = 'G:/Unity Installs/2020.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'G:/Unity Installs/2020.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: G:/Unity Installs/2020.2.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: G:/Unity Installs/2020.2.4f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Register platform support module: G:/Unity Installs/2020.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001019 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001947 seconds.
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 41.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 46.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.755 seconds
+- Completed reload, in  1.051 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001343 seconds.
+Registered in 0.002784 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 37.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 46.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.769 seconds
+- Completed reload, in  1.007 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2758 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 109.0 MB.
-System memory in use after: 109.2 MB.
+System memory in use before: 109.7 MB.
+System memory in use after: 109.8 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3206.
-Total: 2.737200 ms (FindLiveObjects: 0.557800 ms CreateObjectMapping: 0.256600 ms MarkObjects: 1.837200 ms  DeleteObjects: 0.083100 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3207.
+Total: 2.145100 ms (FindLiveObjects: 0.244000 ms CreateObjectMapping: 0.124800 ms MarkObjects: 1.705000 ms  DeleteObjects: 0.070400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/FireBall.prefab
-  artifactKey: Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FireBall.prefab using Guid(8890626d3a3ed31419ba04957551648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f8094df0cbf2ecf9f54571c3c4a3f24') in 0.035047 seconds
-  Import took 0.039148 seconds .
+  path: Assets/Models
+  artifactKey: Guid(76028a93f2ac57646b1951df1796d052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models using Guid(76028a93f2ac57646b1951df1796d052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d0aca8ce562b11ddae27cb84bd4540') in 0.009229 seconds
+  Import took 0.013924 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/Prefabs/fireWallCube.prefab
-  artifactKey: Guid(4265f7244ad399c428b95f36520c4c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/fireWallCube.prefab using Guid(4265f7244ad399c428b95f36520c4c62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d348d2223d6a7a444a07ebcbc985fa') in 0.049277 seconds
-  Import took 0.052924 seconds .
+  Time since last request: 0.000337 seconds.
+  path: Assets/Models/Japanese_Arch_Low.FBX
+  artifactKey: Guid(d41e77f635b39234eb4e29aa337a5b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Japanese_Arch_Low.FBX using Guid(d41e77f635b39234eb4e29aa337a5b92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90e7d2c6956e48e9daa13b5c29a7cb43') in 0.232529 seconds
+  Import took 0.237176 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Prefabs/WallOfFire.prefab
-  artifactKey: Guid(5c82475deabe3f94994055125faf4774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/WallOfFire.prefab using Guid(5c82475deabe3f94994055125faf4774) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c43e751d6da0dce19e2c30262ec2227') in 0.005296 seconds
-  Import took 0.008718 seconds .
+  Time since last request: 2.015652 seconds.
+  path: Assets/Skybox
+  artifactKey: Guid(7bfbcce25ab92084ba37bde3770f15e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox using Guid(7bfbcce25ab92084ba37bde3770f15e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '894dca098bd352373ae78f8cb3ee55c4') in 0.006156 seconds
+  Import took 0.010297 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.398736 seconds.
-  path: Assets/Prefabs/New VFX.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/New VFX.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcb21f6a4c82169503b710b642c5ecd0') in 0.006304 seconds
-  Import took 0.009883 seconds .
+  Time since last request: 0.894757 seconds.
+  path: Assets/Skybox/Mountains.mat
+  artifactKey: Guid(dacf60bd75a00ec40b11e60870f3107a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains.mat using Guid(dacf60bd75a00ec40b11e60870f3107a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb7730b678a5d9b8a74bd46de31e92b5') in 0.035472 seconds
+  Import took 0.039508 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.882001 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2800097338b8940b81dc50f9401a8664') in 0.005138 seconds
-  Import took 0.008763 seconds .
+  Time since last request: 0.981916 seconds.
+  path: Assets/Skybox/Mountains
+  artifactKey: Guid(f8467fbf230ce864390394e230ff9105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains using Guid(f8467fbf230ce864390394e230ff9105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6092961f5314f5a782b7b3aad79620c5') in 0.002704 seconds
+  Import took 0.007572 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.020108 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2800097338b8940b81dc50f9401a8664') in 0.002337 seconds
-  Import took 0.005975 seconds .
+  Time since last request: 0.043395 seconds.
+  path: Assets/Skybox/Mountains/skybox.mat
+  artifactKey: Guid(0ff3aa777f2ccae4dbada9366130d56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains/skybox.mat using Guid(0ff3aa777f2ccae4dbada9366130d56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f4dd5bfd71af03c8e647760042bc216') in 0.029258 seconds
+  Import took 0.033330 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 105.389049 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2049bfcc7bc9a9ecafd81d97f86b297') in 0.002386 seconds
-  Import took 0.006250 seconds .
+  Time since last request: 0.000282 seconds.
+  path: Assets/Skybox/Mountains/skybox_front.psd
+  artifactKey: Guid(e816a17296a9d184ebfff0f3b41205ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains/skybox_front.psd using Guid(e816a17296a9d184ebfff0f3b41205ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a638d1707c3f9fec256575b0d60953fb') in 0.028376 seconds
+  Import took 0.032244 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.197381 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2049bfcc7bc9a9ecafd81d97f86b297') in 0.002459 seconds
-  Import took 0.006183 seconds .
+  Time since last request: 0.000256 seconds.
+  path: Assets/Skybox/Mountains/skybox_left.psd
+  artifactKey: Guid(f6f3a44b2b12e9a45bc02ff2350c2873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains/skybox_left.psd using Guid(f6f3a44b2b12e9a45bc02ff2350c2873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8a5c4a6d605b8893e4e4adf13f592d') in 0.012556 seconds
+  Import took 0.016387 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 66.648004 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56e0d581e39af4fc6e3a72fa386e90e1') in 0.002403 seconds
-  Import took 0.006554 seconds .
+  Time since last request: 0.000271 seconds.
+  path: Assets/Skybox/Mountains/skybox_back.psd
+  artifactKey: Guid(09485c71d5564f24f92d4244bc27b5fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains/skybox_back.psd using Guid(09485c71d5564f24f92d4244bc27b5fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25cad79bacff1068a9539a2afd2d599') in 0.013329 seconds
+  Import took 0.017059 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.009108 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56e0d581e39af4fc6e3a72fa386e90e1') in 0.003145 seconds
-  Import took 0.007250 seconds .
+  Time since last request: 0.000247 seconds.
+  path: Assets/Skybox/Mountains/skybox_down.psd
+  artifactKey: Guid(1b733cade4c3ad644b02226637e1cd09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains/skybox_down.psd using Guid(1b733cade4c3ad644b02226637e1cd09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d669e0135c4c3bfd1a0dda4ded91b26') in 0.011574 seconds
+  Import took 0.015359 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.641398 seconds.
-  path: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled.png
-  artifactKey: Guid(0e5ba0f04df278944a8f5a62f64f5aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled.png using Guid(0e5ba0f04df278944a8f5a62f64f5aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95b7d2aa815ada4ff1006f4836a47741') in 0.064594 seconds
-  Import took 0.068829 seconds .
+  Time since last request: 0.000282 seconds.
+  path: Assets/Skybox/Mountains/skybox_right.psd
+  artifactKey: Guid(76cfeb5d9a2650144902a599ec509800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains/skybox_right.psd using Guid(76cfeb5d9a2650144902a599ec509800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82321ec39d4825ece1bbf4de019e8c93') in 0.013016 seconds
+  Import took 0.016785 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000125 seconds.
-  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/diff-dark@2x.png
-  artifactKey: Guid(1875b6a8fb148514ab1d9494eae2dd9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/diff-dark@2x.png using Guid(1875b6a8fb148514ab1d9494eae2dd9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cef0101ddd4b83dba8eeab6fa4dd2046') in 0.015310 seconds
-  Import took 0.018898 seconds .
+  Time since last request: 0.000253 seconds.
+  path: Assets/Skybox/Mountains/skybox_up.psd
+  artifactKey: Guid(a6202455a7a564340b2dd1deb92aaa75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skybox/Mountains/skybox_up.psd using Guid(a6202455a7a564340b2dd1deb92aaa75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a67cbd6fcedc209591579caf79e7ac3') in 0.012885 seconds
+  Import took 0.016519 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000117 seconds.
-  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/diff-dark.png
-  artifactKey: Guid(06bb2a7fb040987409dae109d185de22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/diff-dark.png using Guid(06bb2a7fb040987409dae109d185de22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763c9c29ed8f5a3e05ec2b7d4daf322e') in 0.014068 seconds
-  Import took 0.017878 seconds .
+  Time since last request: 27.717581 seconds.
+  path: Assets/Snow_mountain
+  artifactKey: Guid(d556b299eeea8544b88f0861dbe3cfe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snow_mountain using Guid(d556b299eeea8544b88f0861dbe3cfe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3724e955e54f36d53e03f33fe6b039e9') in 0.006025 seconds
+  Import took 0.010963 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000107 seconds.
-  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-dark@2x.png
-  artifactKey: Guid(a7d900a247e707e45a257328c3ee381e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-dark@2x.png using Guid(a7d900a247e707e45a257328c3ee381e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67cf3b6dba4f6c260f63f14c2107d6ac') in 0.013491 seconds
-  Import took 0.017274 seconds .
+  Time since last request: 1.047167 seconds.
+  path: Assets/Snow_mountain/snow_mountain
+  artifactKey: Guid(acd2f76f6a2b8c74c94dc67fb1b1587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snow_mountain/snow_mountain using Guid(acd2f76f6a2b8c74c94dc67fb1b1587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d7b72e93e9b9b52d5c83cf2c1d2db66') in 0.005770 seconds
+  Import took 0.010224 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000117 seconds.
-  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-dark.png
-  artifactKey: Guid(ce3ca6a541b5fbc4c80edb5195d78731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-dark.png using Guid(ce3ca6a541b5fbc4c80edb5195d78731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cf4e4222d8972fa985f0c413e578012') in 0.014236 seconds
-  Import took 0.017870 seconds .
+  Time since last request: 0.080577 seconds.
+  path: Assets/Snow_mountain/snow_mountain/Snow_mountain.FBX
+  artifactKey: Guid(41dc84019e9376b46908ba7afdd1d15e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snow_mountain/snow_mountain/Snow_mountain.FBX using Guid(41dc84019e9376b46908ba7afdd1d15e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0326d766715dec22a7f6be2f8f570c1') in 0.205719 seconds
+  Import took 0.209993 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000115 seconds.
-  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-light@2x.png
-  artifactKey: Guid(f1c735dde115d4f4c9ff5c633f07fbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-light@2x.png using Guid(f1c735dde115d4f4c9ff5c633f07fbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73a36f84743ce5b9e7f5695202d0c781') in 0.013927 seconds
-  Import took 0.017484 seconds .
+  Time since last request: 1.616582 seconds.
+  path: Assets/Snow_mountain/snow_mountain/Prefabs
+  artifactKey: Guid(9f4eeb9b4043de748a3fd3b7c8943d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snow_mountain/snow_mountain/Prefabs using Guid(9f4eeb9b4043de748a3fd3b7c8943d84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '787ee9b35e233c66437a06383bac643f') in 0.006430 seconds
+  Import took 0.010956 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000161 seconds.
-  path: Packages/com.unity.visualeffectgraph/Textures/DefaultParticle.tga
-  artifactKey: Guid(276d9e395ae18fe40a9b4988549f2349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.visualeffectgraph/Textures/DefaultParticle.tga using Guid(276d9e395ae18fe40a9b4988549f2349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae8ce503a69e1bc32c9831af987a3c0b') in 0.014981 seconds
-  Import took 0.018602 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled.png
-  artifactKey: Guid(0e5ba0f04df278944a8f5a62f64f5aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled.png using Guid(0e5ba0f04df278944a8f5a62f64f5aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95b7d2aa815ada4ff1006f4836a47741') in 0.004134 seconds
-  Import took 0.007724 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-light.png
-  artifactKey: Guid(bb678af880b2dd74cbd76186590c66da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/deleted-file-light.png using Guid(bb678af880b2dd74cbd76186590c66da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d6a6533868e5a54edc289b0008234fc') in 0.015508 seconds
-  Import took 0.019259 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled@2x.png
-  artifactKey: Guid(0f1c9a12872a30f45bab34f536332bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled@2x.png using Guid(0f1c9a12872a30f45bab34f536332bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b88ed4b14185b44fa76137028eefb23') in 0.015224 seconds
-  Import took 0.018722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 147.245297 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '335bf0b221e8a79542a10e97236e2b23') in 0.003303 seconds
-  Import took 0.007404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 34.028316 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b527a35ad81da2a461fc604ac577a805') in 0.002472 seconds
-  Import took 0.006284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013795 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b527a35ad81da2a461fc604ac577a805') in 0.002450 seconds
-  Import took 0.006315 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 36.593879 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a952e9dd6f7c007679acf1c9d1ee069') in 0.002975 seconds
-  Import took 0.007505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007825 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a952e9dd6f7c007679acf1c9d1ee069') in 0.003059 seconds
-  Import took 0.008184 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.354081 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c45633235d5f6eac5edf492336131d5b') in 0.002449 seconds
-  Import took 0.006885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.029150 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c45633235d5f6eac5edf492336131d5b') in 0.002994 seconds
-  Import took 0.006962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.640374 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e918dc9a4bb540c2fc4e687900e8058') in 0.002565 seconds
-  Import took 0.006214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009735 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e918dc9a4bb540c2fc4e687900e8058') in 0.002485 seconds
-  Import took 0.006412 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.746488 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dfd37fd4ca71e227b576a4ee719a90d') in 0.002355 seconds
-  Import took 0.006155 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.018703 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dfd37fd4ca71e227b576a4ee719a90d') in 0.002482 seconds
-  Import took 0.006607 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.822081 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7997b9c0a4188ea451905233078da55f') in 0.002307 seconds
-  Import took 0.006083 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.013446 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7997b9c0a4188ea451905233078da55f') in 0.002477 seconds
-  Import took 0.006235 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.220687 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05255c96ad2a7af5e0da46943dd37b98') in 0.002433 seconds
-  Import took 0.006241 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.010871 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05255c96ad2a7af5e0da46943dd37b98') in 0.002555 seconds
-  Import took 0.006682 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 151.431869 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977a9d2c99fcc7b86908315080c0dcf4') in 0.002378 seconds
-  Import took 0.006586 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005958 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977a9d2c99fcc7b86908315080c0dcf4') in 0.002242 seconds
-  Import took 0.006000 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.603729 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2d30115be458dcceedc3ec4cb37b5a6') in 0.002351 seconds
-  Import took 0.005903 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.011773 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2d30115be458dcceedc3ec4cb37b5a6') in 0.002433 seconds
-  Import took 0.006877 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.659499 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad2e11323a35dbd852008ebc495c631') in 0.002534 seconds
-  Import took 0.006498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015796 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad2e11323a35dbd852008ebc495c631') in 0.002347 seconds
-  Import took 0.006277 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.842228 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b691889e55c2453a1ffbdab8d41c09a0') in 0.002773 seconds
-  Import took 0.006755 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006887 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b691889e55c2453a1ffbdab8d41c09a0') in 0.002657 seconds
-  Import took 0.006848 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.750969 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f50db2ce685c020c9235b478ab693bf') in 0.002609 seconds
-  Import took 0.006654 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006628 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f50db2ce685c020c9235b478ab693bf') in 0.002213 seconds
-  Import took 0.005950 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.661658 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e8aec6d44015d1bae04ed582f5a914') in 0.002560 seconds
-  Import took 0.006214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006467 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e8aec6d44015d1bae04ed582f5a914') in 0.002197 seconds
-  Import took 0.005837 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.333722 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a18e93904084e14ac8a69f56806f2587') in 0.002444 seconds
-  Import took 0.006159 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.020551 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a18e93904084e14ac8a69f56806f2587') in 0.002259 seconds
-  Import took 0.005969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.712839 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b46c4cb07638f45d440f008712e466c') in 0.002317 seconds
-  Import took 0.005982 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009963 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b46c4cb07638f45d440f008712e466c') in 0.002471 seconds
-  Import took 0.006384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.526999 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f156ed9b039f56648a349239cf2a942') in 0.002533 seconds
-  Import took 0.007202 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007072 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f156ed9b039f56648a349239cf2a942') in 0.002993 seconds
-  Import took 0.007503 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 65.461276 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be5d64a20f288f3a0ae61a998626164') in 0.002868 seconds
-  Import took 0.008005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004593 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be5d64a20f288f3a0ae61a998626164') in 0.002253 seconds
-  Import took 0.005806 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.047540 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18cb8c585de1c79e9acd909fd8ee1e48') in 0.002295 seconds
-  Import took 0.005971 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007187 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18cb8c585de1c79e9acd909fd8ee1e48') in 0.002194 seconds
-  Import took 0.005874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 430.917748 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c3a17b07a2a0e8abb3eb7be31f1204') in 0.002796 seconds
-  Import took 0.007040 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005511 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c3a17b07a2a0e8abb3eb7be31f1204') in 0.002278 seconds
-  Import took 0.005834 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6078.904942 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '567234674391524e06865987bb0b1172') in 0.007964 seconds
-  Import took 0.031840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 51.372159 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c51f9698c4293114b5617f189e90777d') in 0.002554 seconds
-  Import took 0.006353 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005702 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c51f9698c4293114b5617f189e90777d') in 0.002233 seconds
-  Import took 0.005905 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.516862 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b54f02bd7c2460794c9f8407220f2b6') in 0.003386 seconds
-  Import took 0.007821 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009923 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b54f02bd7c2460794c9f8407220f2b6') in 0.002534 seconds
-  Import took 0.006935 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 153089.216993 seconds.
-  path: Assets/Prefabs/FirePunch.vfx
-  artifactKey: Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirePunch.vfx using Guid(48b0564a0f4d4b04999c956ecfd47a74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba5ef1cc9480ab12b65b24a844ecc4f0') in 0.010073 seconds
-  Import took 0.033501 seconds .
+  Time since last request: 1.500459 seconds.
+  path: Assets/Snow_mountain/snow_mountain/Prefabs/Snow_mountain.prefab
+  artifactKey: Guid(a85feef60c5e675428276a080c95062c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snow_mountain/snow_mountain/Prefabs/Snow_mountain.prefab using Guid(a85feef60c5e675428276a080c95062c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f097e30d52d5bb416e278188cb356ee7') in 0.030009 seconds
+  Import took 0.034665 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
