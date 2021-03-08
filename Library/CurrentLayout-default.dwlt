@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 86
+  controlID: 87
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 87
+  controlID: 88
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 88
+  controlID: 89
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,22 +343,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Snow_mountain/snow_mountain
+    - Assets/Materials/Temple
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Snow_mountain/snow_mountain
+  - Assets/Materials/Temple
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-module3-avatar
+  m_LastProjectPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 4c500000
-    m_LastClickedID: 20556
-    m_ExpandedIDs: 00000000064f0000084f00000a4f00000c4f00000e4f0000104f0000124f0000244f00004a5000004c50000000ca9a3b
+    m_SelectedIDs: 9a510000
+    m_LastClickedID: 20890
+    m_ExpandedIDs: 00000000f8500000fa500000fc500000fe5000000051000002510000045100000851000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -386,7 +386,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000064f0000084f00000a4f00000c4f00000e4f0000104f0000124f0000
+    m_ExpandedIDs: 00000000f8500000fa500000fc500000fe500000005100000251000004510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -507,9 +507,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8f4ffff
-      m_LastClickedID: -2856
-      m_ExpandedIDs: 6ef7fffff2f7fffffaf7ffff52fbfffffc510000a0530000
+      m_SelectedIDs: 344c0000
+      m_LastClickedID: 19508
+      m_ExpandedIDs: e0f9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -565,13 +565,13 @@ MonoBehaviour:
   m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
-  m_isRotationLocked: 1
+  m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.60153, y: 0.5778847, z: 4.064911}
+    m_Target: {x: 41.771286, y: -2.375122, z: 0.20140171}
     speed: 2
-    m_Value: {x: -4.60153, y: 0.5778847, z: 4.064911}
+    m_Value: {x: 41.771286, y: -2.375122, z: 0.20140171}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -618,13 +618,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: 0.10127502, y: 0.73408806, z: -0.11230619, w: 0.6619901}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: 0.10028263, y: 0.73426104, z: -0.111205764, w: 0.6621461}
   m_Size:
-    m_Target: 11.776273
+    m_Target: 35.990246
     speed: 2
-    m_Value: 11.776273
+    m_Value: 34.440426
   m_Ortho:
     m_Target: 0
     speed: 2
