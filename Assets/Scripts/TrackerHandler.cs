@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.Azure.Kinect.BodyTracking;
+using System.Collections;
 
 public class TrackerHandler : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TrackerHandler : MonoBehaviour
     public Quaternion[] absoluteJointRotations = new Quaternion[(int)JointId.Count];
     public bool drawSkeletons = true;
     Quaternion Y_180_FLIP = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
+    public GameObject headset;
 
     // Start is called before the first frame update
     void Awake()
@@ -105,10 +107,14 @@ public class TrackerHandler : MonoBehaviour
     {
         //this is an array in case you want to get the n closest bodies
         int closestBody = findClosestTrackedBody(trackerFrameData);
+        
 
         // render the closest body
         Body skeleton = trackerFrameData.Bodies[closestBody];
-        renderSkeleton(skeleton, 0);
+        Vector3 HeadPos = new Vector3(skeleton.JointPositions3D[(int)JointId.Head].X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z);
+        Vector3 diff = HeadPos - headset.GetComponent<Transform>().position;
+        Debug.Log(diff);
+        renderSkeleton(skeleton, 0, diff);
     }
 
     int findIndexFromId(BackgroundData frameData, int id)
@@ -154,12 +160,13 @@ public class TrackerHandler : MonoBehaviour
         }
     }
 
-    public void renderSkeleton(Body skeleton, int skeletonNumber)
+    public void renderSkeleton(Body skeleton, int skeletonNumber, Vector3 diff)
     {
+        System.Numerics.Vector3 kinectDiff = new System.Numerics.Vector3(diff.x, diff.y, diff.z);
         for (int jointNum = 0; jointNum < (int)JointId.Count; jointNum++)
         {
             Vector3 jointPos = new Vector3(skeleton.JointPositions3D[jointNum].X, -skeleton.JointPositions3D[jointNum].Y, skeleton.JointPositions3D[jointNum].Z);
-            Vector3 offsetPosition = transform.rotation * jointPos;
+            Vector3 offsetPosition = (transform.rotation * jointPos) + diff;
             Vector3 positionInTrackerRootSpace = transform.position + offsetPosition;
             Quaternion jointRot = Y_180_FLIP * new Quaternion(skeleton.JointRotations[jointNum].X, skeleton.JointRotations[jointNum].Y,
                 skeleton.JointRotations[jointNum].Z, skeleton.JointRotations[jointNum].W) * Quaternion.Inverse(basisJointMap[(JointId)jointNum]);
@@ -206,3 +213,4 @@ public class TrackerHandler : MonoBehaviour
     }
 
 }
+
