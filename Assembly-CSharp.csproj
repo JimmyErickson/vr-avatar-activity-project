@@ -71,13 +71,13 @@
     <Compile Include="Assets\Scripts\main.cs" />
     <Compile Include="Assets\Skeleton\SkeletonPosition.cs" />
     <Compile Include="Assets\HitboxManager.cs" />
+    <Compile Include="Assets\Scripts\HandCollider.cs" />
     <Compile Include="Assets\Config\Configs.cs" />
     <Compile Include="Assets\Scripts\PuppetAvatar.cs" />
     <Compile Include="Assets\Singleton.cs" />
     <Compile Include="Assets\Skeleton\CameraFlipper.cs" />
     <Compile Include="Assets\Scripts\BackgroundData.cs" />
     <Compile Include="Assets\comboManager.cs" />
-    <Compile Include="Assets\Scripts\HandCollider.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Models\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />

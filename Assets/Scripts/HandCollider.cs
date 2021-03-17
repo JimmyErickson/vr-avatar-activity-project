@@ -50,7 +50,7 @@ public class HandCollider : MonoBehaviour
     {
         //Debug.Log("Collision");
 
-        if (other.gameObject.name == "Collider L")
+        if (other.gameObject.tag == "Collider")
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
             other.gameObject.GetComponent<MeshRenderer>().material = red;
