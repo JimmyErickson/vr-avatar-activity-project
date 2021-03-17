@@ -8,6 +8,7 @@ TagManager:
   - wallOfFire
   - punchBlock
   - FootOut
+  - Collider
   layers:
   - Default
   - TransparentFX

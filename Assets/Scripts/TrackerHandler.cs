@@ -2,6 +2,7 @@
 using UnityEngine;
 using Microsoft.Azure.Kinect.BodyTracking;
 using System.Collections;
+using System;
 
 public class TrackerHandler : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class TrackerHandler : MonoBehaviour
     Dictionary<JointId, Quaternion> basisJointMap;
     public Quaternion[] absoluteJointRotations = new Quaternion[(int)JointId.Count];
     public bool drawSkeletons = true;
-    Quaternion Y_180_FLIP = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
+    Quaternion Y_180_FLIP = new Quaternion(0.0f, 1.0f, 0, 90.0f);
     public GameObject headset;
 
     // Start is called before the first frame update
@@ -111,9 +112,42 @@ public class TrackerHandler : MonoBehaviour
 
         // render the closest body
         Body skeleton = trackerFrameData.Bodies[closestBody];
+        Vector3 rightEye = new Vector3(skeleton.JointPositions3D[(int)JointId.EyeRight].X, skeleton.JointPositions3D[(int)JointId.EyeRight].Y, skeleton.JointPositions3D[(int)JointId.EyeRight].Z);
+        Vector3 leftEye = new Vector3(skeleton.JointPositions3D[(int)JointId.EyeLeft].X, skeleton.JointPositions3D[(int)JointId.EyeLeft].Y, skeleton.JointPositions3D[(int)JointId.EyeLeft].Z);
+        Vector3 midPoint = rightEye + (leftEye - rightEye) / 2;
         Vector3 HeadPos = new Vector3(skeleton.JointPositions3D[(int)JointId.Head].X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z);
-        Vector3 diff = HeadPos - headset.GetComponent<Transform>().position;
+        Vector3 diff = headset.GetComponent<Transform>().position - midPoint;
+        System.Numerics.Vector3 kinectDiff = new System.Numerics.Vector3(diff.x, diff.y, diff.z);
+        for (int i = 0; i < skeleton.JointPositions3D.Length; i++)
+        {
+            skeleton.JointPositions3D[i] = new System.Numerics.Vector3(skeleton.JointPositions3D[i].X + kinectDiff.X, skeleton.JointPositions3D[i].Y, skeleton.JointPositions3D[i].Z + kinectDiff.Z);
+        }
+        //Vector3 NewHeadPos = new Vector3(skeleton.JointPositions3D[(int)JointId.Head].X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z) + diff;
+        //Vector3 NewHeadPos = skeleton.JointPositions3D[(int)JointId.Head];
+
+        //skeleton.JointPositions3D[(int)JointId.Head] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointId.Head].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z + kinectDiff.Z);
+        /*skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
+        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);*/
+
+
+        /*Debug.Log("Old:");
+        Debug.Log(HeadPos);
+        Debug.Log("Headset");
+        Debug.Log(headset.GetComponent<Transform>().position);
+        Debug.Log("Diff:");
         Debug.Log(diff);
+        Debug.Log("New");
+        Debug.Log(skeleton.JointPositions3D[(int)JointId.Head]);*/
+
+        //smoothedSkel = Smoother.ReceiveNewSensorData(skeleton, true);
+        
         renderSkeleton(skeleton, 0, diff);
     }
 
@@ -166,9 +200,9 @@ public class TrackerHandler : MonoBehaviour
         for (int jointNum = 0; jointNum < (int)JointId.Count; jointNum++)
         {
             Vector3 jointPos = new Vector3(skeleton.JointPositions3D[jointNum].X, -skeleton.JointPositions3D[jointNum].Y, skeleton.JointPositions3D[jointNum].Z);
-            Vector3 offsetPosition = (transform.rotation * jointPos) + diff;
+            Vector3 offsetPosition = transform.rotation * jointPos;
             Vector3 positionInTrackerRootSpace = transform.position + offsetPosition;
-            Quaternion jointRot = Y_180_FLIP * new Quaternion(skeleton.JointRotations[jointNum].X, skeleton.JointRotations[jointNum].Y,
+            Quaternion jointRot = Y_180_FLIP * new Quaternion(skeleton.JointRotations[jointNum].X, -skeleton.JointRotations[jointNum].Y,
                 skeleton.JointRotations[jointNum].Z, skeleton.JointRotations[jointNum].W) * Quaternion.Inverse(basisJointMap[(JointId)jointNum]);
             absoluteJointRotations[jointNum] = jointRot;
             // these are absolute body space because each joint has the body root for a parent in the scene graph
