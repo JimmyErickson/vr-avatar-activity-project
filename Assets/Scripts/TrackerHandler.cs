@@ -3,6 +3,8 @@ using UnityEngine;
 using Microsoft.Azure.Kinect.BodyTracking;
 using System.Collections;
 using System;
+using System.IO;
+using System.Text;
 
 public class TrackerHandler : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class TrackerHandler : MonoBehaviour
     public bool drawSkeletons = true;
     Quaternion Y_180_FLIP = new Quaternion(0.0f, 1.0f, 0, 90.0f);
     public GameObject headset;
+    public GameObject poseSaver;
 
     // Start is called before the first frame update
     void Awake()
@@ -146,9 +149,36 @@ public class TrackerHandler : MonoBehaviour
         Debug.Log("New");
         Debug.Log(skeleton.JointPositions3D[(int)JointId.Head]);*/
 
-        //smoothedSkel = Smoother.ReceiveNewSensorData(skeleton, true);
-        
+        //skelPosition = new SkeletonPosition(skeleton, )
+
+        //Body smoothedSkel = Smoother.ReceiveNewSensorData(skeleton, true);
+
+        if (poseSaver.activeSelf)
+        {
+            saveCurrentPose(skeleton);
+            poseSaver.SetActive(false);
+        }
+
         renderSkeleton(skeleton, 0, diff);
+    }
+
+    public void saveCurrentPose(Body skeleton)
+    {
+        string poseFilePath = "C:/Users/vrcart03/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
+                               //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
+        string seperator = ",";
+        StringBuilder outputString = new StringBuilder();
+
+        string[] positions = new string[skeleton.JointPositions3D.Length];
+
+        for(int i=0; i< skeleton.JointPositions3D.Length; i++)
+        {
+            positions[i] = string.Join(seperator, skeleton.JointPositions3D[i]);
+        }
+    
+        outputString.AppendLine(string.Join(seperator, positions));
+
+        File.AppendAllText(poseFilePath, outputString.ToString());
     }
 
     int findIndexFromId(BackgroundData frameData, int id)
