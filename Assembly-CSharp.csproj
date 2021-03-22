@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\CustomColors.cs" />
      <Compile Include="Assets\Scripts\Skeleton.cs" />
      <Compile Include="Assets\GlobalScript.cs" />
+     <Compile Include="Assets\Skybox\ColorSkies\Demo\Scripts\LookCamera.cs" />
      <Compile Include="Assets\Config\ConfigLoader.cs" />
      <Compile Include="Assets\Scripts\SkeletalTrackingProvider.cs" />
      <Compile Include="Assets\Models\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_Utils.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Singleton.cs" />
      <Compile Include="Assets\Skeleton\CameraFlipper.cs" />
      <Compile Include="Assets\Scripts\BackgroundData.cs" />
+     <Compile Include="Assets\Skybox\ColorSkies\Demo\Scripts\SkyboxChanger.cs" />
      <Compile Include="Assets\comboManager.cs" />
      <None Include="Assets\Models\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
      <None Include="Assets\Models\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Billboard_301.shader" />
