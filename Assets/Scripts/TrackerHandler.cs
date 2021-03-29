@@ -111,47 +111,22 @@ public class TrackerHandler : MonoBehaviour
     {
         //this is an array in case you want to get the n closest bodies
         int closestBody = findClosestTrackedBody(trackerFrameData);
-        
+
 
         // render the closest body
         Body skeleton = trackerFrameData.Bodies[closestBody];
-        Vector3 rightEye = new Vector3(skeleton.JointPositions3D[(int)JointId.EyeRight].X, skeleton.JointPositions3D[(int)JointId.EyeRight].Y, skeleton.JointPositions3D[(int)JointId.EyeRight].Z);
-        Vector3 leftEye = new Vector3(skeleton.JointPositions3D[(int)JointId.EyeLeft].X, skeleton.JointPositions3D[(int)JointId.EyeLeft].Y, skeleton.JointPositions3D[(int)JointId.EyeLeft].Z);
-        Vector3 midPoint = rightEye + (leftEye - rightEye) / 2;
-        Vector3 HeadPos = new Vector3(skeleton.JointPositions3D[(int)JointId.Head].X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z);
-        Vector3 diff = headset.GetComponent<Transform>().position - midPoint;
+        //Vector3 rightEye = new Vector3(skeleton.JointPositions3D[(int)JointId.EyeRight].X, skeleton.JointPositions3D[(int)JointId.EyeRight].Y, skeleton.JointPositions3D[(int)JointId.EyeRight].Z);
+        //Vector3 leftEye = new Vector3(skeleton.JointPositions3D[(int)JointId.EyeLeft].X, skeleton.JointPositions3D[(int)JointId.EyeLeft].Y, skeleton.JointPositions3D[(int)JointId.EyeLeft].Z);
+        //Vector3 midPoint = rightEye + (leftEye - rightEye) / 2;
+        //Vector3 diff = headset.GetComponent<Transform>().position - midPoint;
+        Vector3 headPos = new Vector3(skeleton.JointPositions3D[(int)JointId.Head].X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z);
+        Vector3 diff = headset.GetComponent<Transform>().position - headPos;
         System.Numerics.Vector3 kinectDiff = new System.Numerics.Vector3(diff.x, diff.y, diff.z);
         for (int i = 0; i < skeleton.JointPositions3D.Length; i++)
         {
             skeleton.JointPositions3D[i] = new System.Numerics.Vector3(skeleton.JointPositions3D[i].X + kinectDiff.X, skeleton.JointPositions3D[i].Y, skeleton.JointPositions3D[i].Z + kinectDiff.Z);
         }
-        //Vector3 NewHeadPos = new Vector3(skeleton.JointPositions3D[(int)JointId.Head].X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z) + diff;
-        //Vector3 NewHeadPos = skeleton.JointPositions3D[(int)JointId.Head];
 
-        //skeleton.JointPositions3D[(int)JointId.Head] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointId.Head].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z + kinectDiff.Z);
-        /*skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);
-        skeleton.JointPositions3D[(int)JointID.] = new System.Numerics.Vector3(skeleton.JointPositions3D[(int)JointID.].X + kinectDiff.X, skeleton.JointPositions3D[(int)JointID.].Y, skeleton.JointPositions3D[(int)JointID.].Z + kinectDiff.Z);*/
-
-
-        /*Debug.Log("Old:");
-        Debug.Log(HeadPos);
-        Debug.Log("Headset");
-        Debug.Log(headset.GetComponent<Transform>().position);
-        Debug.Log("Diff:");
-        Debug.Log(diff);
-        Debug.Log("New");
-        Debug.Log(skeleton.JointPositions3D[(int)JointId.Head]);*/
-
-        //skelPosition = new SkeletonPosition(skeleton, )
-
-        //Body smoothedSkel = Smoother.ReceiveNewSensorData(skeleton, true);
 
         if (poseSaver.activeSelf)
         {
@@ -159,26 +134,50 @@ public class TrackerHandler : MonoBehaviour
             poseSaver.SetActive(false);
         }
 
-        renderSkeleton(skeleton, 0, diff);
+        renderSkeleton(skeleton, 0);
     }
 
     public void saveCurrentPose(Body skeleton)
     {
-        string poseFilePath = "C:/Users/vrcart03/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
-                               //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
+        saveCurrentPoseRotation(skeleton);
+        string poseFilePath = "C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
+        //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
         string seperator = ",";
         StringBuilder outputString = new StringBuilder();
 
         string[] positions = new string[skeleton.JointPositions3D.Length];
 
-        for(int i=0; i< skeleton.JointPositions3D.Length; i++)
+        for (int i = 0; i < skeleton.JointPositions3D.Length; i++)
         {
-            positions[i] = string.Join(seperator, skeleton.JointPositions3D[i]);
+            positions[i] = string.Join(seperator, skeleton.JointPositions3D[i]).Trim('<', '>');
         }
-    
+
         outputString.AppendLine(string.Join(seperator, positions));
 
-        File.AppendAllText(poseFilePath, outputString.ToString());
+        string trimmedOutput = outputString.ToString().Trim('<', '>');
+
+        File.AppendAllText(poseFilePath, trimmedOutput);
+    }
+
+    public void saveCurrentPoseRotation(Body skeleton)
+    {
+        string poseFilePath = "C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesRotationsFile.csv";
+        //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
+        string seperator = ",";
+        StringBuilder outputString = new StringBuilder();
+
+        string[] positions = new string[skeleton.JointRotations.Length];
+
+        for (int i = 0; i < skeleton.JointRotations.Length; i++)
+        {
+            positions[i] = string.Join(seperator, skeleton.JointRotations[i]).Trim('<', '>');
+        }
+
+        outputString.AppendLine(string.Join(seperator, positions));
+
+        string trimmedOutput = outputString.ToString().Trim('<', '>');
+
+        File.AppendAllText(poseFilePath, trimmedOutput);
     }
 
     int findIndexFromId(BackgroundData frameData, int id)
@@ -224,9 +223,9 @@ public class TrackerHandler : MonoBehaviour
         }
     }
 
-    public void renderSkeleton(Body skeleton, int skeletonNumber, Vector3 diff)
+    public void renderSkeleton(Body skeleton, int skeletonNumber)
     {
-        System.Numerics.Vector3 kinectDiff = new System.Numerics.Vector3(diff.x, diff.y, diff.z);
+        
         for (int jointNum = 0; jointNum < (int)JointId.Count; jointNum++)
         {
             Vector3 jointPos = new Vector3(skeleton.JointPositions3D[jointNum].X, -skeleton.JointPositions3D[jointNum].Y, skeleton.JointPositions3D[jointNum].Z);
@@ -271,10 +270,12 @@ public class TrackerHandler : MonoBehaviour
             parentJointRotationBodySpace = absoluteJointRotations[(int)parent];
         }
         Quaternion jointRotationBodySpace = absoluteJointRotations[(int)jointId];
-        Quaternion relativeRotation =  Quaternion.Inverse(parentJointRotationBodySpace) * jointRotationBodySpace;
+        Quaternion relativeRotation = Quaternion.Inverse(parentJointRotationBodySpace) * jointRotationBodySpace;
 
         return relativeRotation;
     }
 
 }
+
+
 

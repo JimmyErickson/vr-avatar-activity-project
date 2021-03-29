@@ -1,19 +1,19 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Josiah/Desktop/VirtualWorlds/vr-avatar-activity-project/Packages/manifest.json
+    m_FilePath: C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637526363550940689
+      ticks: 637526471361845537
     m_Hash: 2421923739
   m_LockFileStatus:
-    m_FilePath: C:/Users/Josiah/Desktop/VirtualWorlds/vr-avatar-activity-project/Packages/packages-lock.json
+    m_FilePath: C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637526455344090629
+      ticks: 637526472770631407
     m_Hash: 3503815870
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -120,7 +120,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -223,7 +223,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -304,7 +304,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -373,7 +373,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.3
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.postprocessing@3.0.3
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.postprocessing@3.0.3
       assetPath: Packages/com.unity.postprocessing
       name: com.unity.postprocessing
       displayName: Post Processing
@@ -460,7 +460,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.22
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.test-framework@1.1.22
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.test-framework@1.1.22
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -550,7 +550,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.3
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.textmeshpro@3.0.3
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.textmeshpro@3.0.3
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -701,7 +701,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.6
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.timeline@1.4.6
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.timeline@1.4.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -761,7 +761,6 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
-        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -814,7 +813,6 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
-        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -828,7 +826,7 @@ m_PackageAssets:
         - 1.5.4
         - 1.6.0-pre.1
         - 1.6.0-pre.3
-        verified: 1.4.7
+        verified: 1.4.6
       dependencies:
       - name: com.unity.modules.director
         version: 1.0.0
@@ -941,7 +939,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 10.3.1
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.visualeffectgraph@10.3.1
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.visualeffectgraph@10.3.1
       assetPath: Packages/com.unity.visualeffectgraph
       name: com.unity.visualeffectgraph
       displayName: Visual Effect Graph
@@ -1062,12 +1060,12 @@ m_PackageAssets:
         url: git+https://github.com/Unity-Technologies/Graphics.git
         revision: 04da21e5dc442239eb39b80d9b201a16d860bd75
         path: 
-    - packageId: com.valvesoftware.unity.openvr@file:C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+    - packageId: com.valvesoftware.unity.openvr@file:C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
       testable: 0
       isDirectDependency: 1
       version: 1.1.4
       source: 6
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.valvesoftware.unity.openvr@eaf8dda5f0d4-1615242337474
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.valvesoftware.unity.openvr@8e1ba30b336b-1617050324096
       assetPath: Packages/com.valvesoftware.unity.openvr
       name: com.valvesoftware.unity.openvr
       displayName: OpenVR XR Plugin
@@ -2894,7 +2892,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 3.2.13
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.xr.management@3.2.13
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.xr.management@3.2.13
       assetPath: Packages/com.unity.xr.management
       name: com.unity.xr.management
       displayName: XR Plugin Management
@@ -3014,7 +3012,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 2.1.7
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
       assetPath: Packages/com.unity.xr.legacyinputhelpers
       name: com.unity.xr.legacyinputhelpers
       displayName: XR Legacy Input Helpers
@@ -3106,7 +3104,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.3.1
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.shadergraph@10.3.1
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.shadergraph@10.3.1
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
       displayName: Shader Graph
@@ -3257,7 +3255,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3318,7 +3316,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.subsystemregistration@1.0.6
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.subsystemregistration@1.0.6
       assetPath: Packages/com.unity.subsystemregistration
       name: com.unity.subsystemregistration
       displayName: Subsystem Registration
@@ -3374,7 +3372,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.3.1
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.render-pipelines.core@10.3.1
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.render-pipelines.core@10.3.1
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
       displayName: Core RP Library
@@ -3480,7 +3478,6 @@ m_PackageAssets:
         - 10.2.2
         - 10.3.1
         - 10.3.2
-        - 10.4.0
         compatible:
         - 10.2.2
         - 10.3.1
@@ -3522,7 +3519,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.3.1
       source: 1
-      resolvedPath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Library\PackageCache\com.unity.searcher@4.3.1
+      resolvedPath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Library\PackageCache\com.unity.searcher@4.3.1
       assetPath: Packages/com.unity.searcher
       name: com.unity.searcher
       displayName: Searcher
@@ -3549,7 +3546,6 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
-        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
         compatible:
@@ -3564,10 +3560,9 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
-        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
-        verified: 4.3.2
+        verified: 4.3.1
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -3595,19 +3590,19 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus:
-    - m_FilePath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz/package.json
+    - m_FilePath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz/package.json
       m_PathExists: 0
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
         ticks: 0
       m_Hash: 0
-    - m_FilePath: C:\Users\Josiah\Desktop\VirtualWorlds\vr-avatar-activity-project\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+    - m_FilePath: C:\Users\vrcart01\Desktop\vr-avatar-activity-project\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
       m_PathExists: 1
       m_ContentTrackingEnabled: 1
       m_ModificationDate:
         serializedVersion: 2
-        ticks: 637508391374736375
+        ticks: 637526471240958539
       m_Hash: 2919789393
-m_ProjectPath: C:/Users/Josiah/Desktop/VirtualWorlds/vr-avatar-activity-project/Packages
+m_ProjectPath: C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Packages
 m_EditorVersion: 2020.2.3f1 (8ff31bc5bf5b)
