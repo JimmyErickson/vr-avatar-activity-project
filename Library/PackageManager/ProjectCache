@@ -5,15 +5,15 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637521209629313410
-    m_Hash: 518885701
+      ticks: 637526363550940689
+    m_Hash: 2421923739
   m_LockFileStatus:
     m_FilePath: C:/Users/Josiah/Desktop/VirtualWorlds/vr-avatar-activity-project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637521209637654149
+      ticks: 637526455344090629
     m_Hash: 3503815870
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
