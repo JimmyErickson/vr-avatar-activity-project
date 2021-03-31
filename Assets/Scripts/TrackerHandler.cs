@@ -130,8 +130,10 @@ public class TrackerHandler : MonoBehaviour
 
         if (poseSaver.activeSelf)
         {
+            Debug.Log("Saving!");
             saveCurrentPose(skeleton);
             poseSaver.SetActive(false);
+            Debug.Log("Saved!");
         }
 
         renderSkeleton(skeleton, 0);

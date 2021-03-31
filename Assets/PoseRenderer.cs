@@ -30,16 +30,113 @@ public class PoseRenderer : MonoBehaviour
     {
         if (renderPose.activeSelf)
         {
-            DisplayPose("Dragon");
+            DisplayPose("Patrick");
         }
+    }
+
+    void Awake()
+    {
+        parentJointMap = new Dictionary<JointId, JointId>();
+
+        // pelvis has no parent so set to count
+        parentJointMap[JointId.Pelvis] = JointId.Count;
+        parentJointMap[JointId.SpineNavel] = JointId.Pelvis;
+        parentJointMap[JointId.SpineChest] = JointId.SpineNavel;
+        parentJointMap[JointId.Neck] = JointId.SpineChest;
+        parentJointMap[JointId.ClavicleLeft] = JointId.SpineChest;
+        parentJointMap[JointId.ShoulderLeft] = JointId.ClavicleLeft;
+        parentJointMap[JointId.ElbowLeft] = JointId.ShoulderLeft;
+        parentJointMap[JointId.WristLeft] = JointId.ElbowLeft;
+        parentJointMap[JointId.HandLeft] = JointId.WristLeft;
+        parentJointMap[JointId.HandTipLeft] = JointId.HandLeft;
+        parentJointMap[JointId.ThumbLeft] = JointId.HandLeft;
+        parentJointMap[JointId.ClavicleRight] = JointId.SpineChest;
+        parentJointMap[JointId.ShoulderRight] = JointId.ClavicleRight;
+        parentJointMap[JointId.ElbowRight] = JointId.ShoulderRight;
+        parentJointMap[JointId.WristRight] = JointId.ElbowRight;
+        parentJointMap[JointId.HandRight] = JointId.WristRight;
+        parentJointMap[JointId.HandTipRight] = JointId.HandRight;
+        parentJointMap[JointId.ThumbRight] = JointId.HandRight;
+        parentJointMap[JointId.HipLeft] = JointId.SpineNavel;
+        parentJointMap[JointId.KneeLeft] = JointId.HipLeft;
+        parentJointMap[JointId.AnkleLeft] = JointId.KneeLeft;
+        parentJointMap[JointId.FootLeft] = JointId.AnkleLeft;
+        parentJointMap[JointId.HipRight] = JointId.SpineNavel;
+        parentJointMap[JointId.KneeRight] = JointId.HipRight;
+        parentJointMap[JointId.AnkleRight] = JointId.KneeRight;
+        parentJointMap[JointId.FootRight] = JointId.AnkleRight;
+        parentJointMap[JointId.Head] = JointId.Pelvis;
+        parentJointMap[JointId.Nose] = JointId.Head;
+        parentJointMap[JointId.EyeLeft] = JointId.Head;
+        parentJointMap[JointId.EarLeft] = JointId.Head;
+        parentJointMap[JointId.EyeRight] = JointId.Head;
+        parentJointMap[JointId.EarRight] = JointId.Head;
+
+        Vector3 zpositive = Vector3.forward;
+        Vector3 xpositive = Vector3.right;
+        Vector3 ypositive = Vector3.up;
+        // spine and left hip are the same
+        Quaternion leftHipBasis = Quaternion.LookRotation(xpositive, -zpositive);
+        Quaternion spineHipBasis = Quaternion.LookRotation(xpositive, -zpositive);
+        Quaternion rightHipBasis = Quaternion.LookRotation(xpositive, zpositive);
+        // arms and thumbs share the same basis
+        Quaternion leftArmBasis = Quaternion.LookRotation(ypositive, -zpositive);
+        Quaternion rightArmBasis = Quaternion.LookRotation(-ypositive, zpositive);
+        Quaternion leftHandBasis = Quaternion.LookRotation(-zpositive, -ypositive);
+        Quaternion rightHandBasis = Quaternion.identity;
+        Quaternion leftFootBasis = Quaternion.LookRotation(xpositive, ypositive);
+        Quaternion rightFootBasis = Quaternion.LookRotation(xpositive, -ypositive);
+
+        basisJointMap = new Dictionary<JointId, Quaternion>();
+
+        // pelvis has no parent so set to count
+        basisJointMap[JointId.Pelvis] = spineHipBasis;
+        basisJointMap[JointId.SpineNavel] = spineHipBasis;
+        basisJointMap[JointId.SpineChest] = spineHipBasis;
+        basisJointMap[JointId.Neck] = spineHipBasis;
+        basisJointMap[JointId.ClavicleLeft] = leftArmBasis;
+        basisJointMap[JointId.ShoulderLeft] = leftArmBasis;
+        basisJointMap[JointId.ElbowLeft] = leftArmBasis;
+        basisJointMap[JointId.WristLeft] = leftHandBasis;
+        basisJointMap[JointId.HandLeft] = leftHandBasis;
+        basisJointMap[JointId.HandTipLeft] = leftHandBasis;
+        basisJointMap[JointId.ThumbLeft] = leftArmBasis;
+        basisJointMap[JointId.ClavicleRight] = rightArmBasis;
+        basisJointMap[JointId.ShoulderRight] = rightArmBasis;
+        basisJointMap[JointId.ElbowRight] = rightArmBasis;
+        basisJointMap[JointId.WristRight] = rightHandBasis;
+        basisJointMap[JointId.HandRight] = rightHandBasis;
+        basisJointMap[JointId.HandTipRight] = rightHandBasis;
+        basisJointMap[JointId.ThumbRight] = rightArmBasis;
+        basisJointMap[JointId.HipLeft] = leftHipBasis;
+        basisJointMap[JointId.KneeLeft] = leftHipBasis;
+        basisJointMap[JointId.AnkleLeft] = leftHipBasis;
+        basisJointMap[JointId.FootLeft] = leftFootBasis;
+        basisJointMap[JointId.HipRight] = rightHipBasis;
+        basisJointMap[JointId.KneeRight] = rightHipBasis;
+        basisJointMap[JointId.AnkleRight] = rightHipBasis;
+        basisJointMap[JointId.FootRight] = rightFootBasis;
+        basisJointMap[JointId.Head] = spineHipBasis;
+        basisJointMap[JointId.Nose] = spineHipBasis;
+        basisJointMap[JointId.EyeLeft] = spineHipBasis;
+        basisJointMap[JointId.EarLeft] = spineHipBasis;
+        basisJointMap[JointId.EyeRight] = spineHipBasis;
+        basisJointMap[JointId.EarRight] = spineHipBasis;
     }
 
     public void DisplayPose(string poseKey)
     {
+        Debug.Log("Displaying Pose");
         Body examplePose = new Body(poses[poseKey].Length);
         examplePose.JointPositions3D = poses[poseKey];
+        Dictionary<string, System.Numerics.Quaternion[]>.KeyCollection keys = poseRotations.Keys;
+        foreach(string key in keys)
+        {
+            Debug.Log(key);
+        }
         examplePose.JointRotations = poseRotations[poseKey];
-        renderSkeleton(examplePose, 1);
+        Debug.Log("Pose part 2");
+        renderSkeleton(examplePose, 0);
     }
 
     private static readonly string logPrefix = "DataParser: ";
@@ -65,13 +162,13 @@ public class PoseRenderer : MonoBehaviour
 
                     //float[,] jointPositions = new float[parsedLine.Length, 3];
                     System.Numerics.Vector3[] jointPositions = new System.Numerics.Vector3[(parsedLine.Length-1)/3];
-                    for (int i = 0; i < parsedLine.Length - 2; i += 3)
+                    for (int i = 1; i < parsedLine.Length - 3; i += 3)
                     {
                         int index = (i - 1) / 3;
                         //jointPositions[index, 0] = float.Parse(parsedLine[i + 1]);
                         //jointPositions[index, 1] = float.Parse(parsedLine[i + 2]);
                         //jointPositions[index, 2] = float.Parse(parsedLine[i + 3]);
-                        jointPositions[index] = new System.Numerics.Vector3(float.Parse(parsedLine[i + 1]), float.Parse(parsedLine[i + 2]), float.Parse(parsedLine[i + 3]));
+                        jointPositions[index] = new System.Numerics.Vector3(float.Parse(parsedLine[i]), float.Parse(parsedLine[i + 1]), float.Parse(parsedLine[i + 2]));
                     }
 
                     poses.Add(parsedLine[0], jointPositions);
@@ -99,19 +196,21 @@ public class PoseRenderer : MonoBehaviour
                 // the file is reached.
                 while ((line = sr.ReadLine()) != null)
                 {
-                    Debug.Log(logPrefix + line);
+                    Debug.Log(logPrefix + "Rotations" + line);
                     var parsedLine = ParseCSVLine(line);
                     if (IfEmptyValues(parsedLine))
                         continue;
 
                     //float[,] jointRotations = new float[parsedLine.Length, 4];
-                    System.Numerics.Quaternion[] jointRotations = new System.Numerics.Quaternion[parsedLine.Length];
-                    for (int i = 0; i < parsedLine.Length; i ++)
+                    System.Numerics.Quaternion[] jointRotations = new System.Numerics.Quaternion[parsedLine.Length-1];
+                    for (int i = 0; i < parsedLine.Length-1; i ++)
                     {
-                        string[] splitOnSpace = parsedLine[i].Split(' ');
+                        string[] splitOnSpace = parsedLine[i+1].Split(' ');
                         float[] splitOnColon = new float[4];
+                        
                         for(int j=0; j<4; j++) {
                             splitOnColon[j] = float.Parse(splitOnSpace[j].Split(':')[1].Trim('}'));
+                            Debug.Log("check 1");
                         }
                         
                         jointRotations[i] = new System.Numerics.Quaternion(splitOnColon[0], splitOnColon[1], splitOnColon[2], splitOnColon[3]);
@@ -125,7 +224,7 @@ public class PoseRenderer : MonoBehaviour
         catch (System.Exception e)
         {
             // Let the user know what went wrong.
-            Debug.LogError(logPrefix + "The file could not be read:");
+            Debug.LogError(logPrefix + "The rotations file could not be read:");
             Debug.LogError(e.Message);
         }
     }
