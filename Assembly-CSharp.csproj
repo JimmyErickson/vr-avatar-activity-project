@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\BackgroundData.cs" />
     <Compile Include="Assets\Skybox\ColorSkies\Demo\Scripts\SkyboxChanger.cs" />
     <Compile Include="Assets\comboManager.cs" />
+    <Compile Include="Assets\distanceTracker.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Models\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />

@@ -17,20 +17,23 @@ public class PoseRenderer : MonoBehaviour
     public Dictionary<string, System.Numerics.Vector3[]> poses { get; set; } = new Dictionary<string, System.Numerics.Vector3[]>();
     public Dictionary<string, System.Numerics.Quaternion[]> poseRotations { get; set; } = new Dictionary<string, System.Numerics.Quaternion[]>();
     public GameObject renderPose;
+    private List<string> poseKeys;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello There");
+        //Debug.Log("Hello There");
         LoadData("C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv");
-        
+        poseChanger.currentPose = 0;
+        poseKeys = new List<string>(poses.Keys);
     }
 
     void Update()
     {
         if (renderPose.activeSelf)
         {
-            DisplayPose("Patrick");
+            DisplayPose(poseKeys[poseChanger.currentPose]);
         }
     }
 
@@ -126,16 +129,11 @@ public class PoseRenderer : MonoBehaviour
 
     public void DisplayPose(string poseKey)
     {
-        Debug.Log("Displaying Pose");
+        
         Body examplePose = new Body(poses[poseKey].Length);
         examplePose.JointPositions3D = poses[poseKey];
-        Dictionary<string, System.Numerics.Quaternion[]>.KeyCollection keys = poseRotations.Keys;
-        foreach(string key in keys)
-        {
-            Debug.Log(key);
-        }
         examplePose.JointRotations = poseRotations[poseKey];
-        Debug.Log("Pose part 2");
+        
         renderSkeleton(examplePose, 0);
     }
 
@@ -281,4 +279,10 @@ public class PoseRenderer : MonoBehaviour
         }
         return false;
     }
+}
+
+public static class poseChanger
+{
+    public static bool changePose;
+    public static int currentPose;
 }
