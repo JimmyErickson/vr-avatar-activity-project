@@ -18,6 +18,7 @@ public class PoseRenderer : MonoBehaviour
     public Dictionary<string, System.Numerics.Quaternion[]> poseRotations { get; set; } = new Dictionary<string, System.Numerics.Quaternion[]>();
     public GameObject renderPose;
     private List<string> poseKeys;
+    public GameObject guideAvatar;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class PoseRenderer : MonoBehaviour
         if (renderPose.activeSelf)
         {
             DisplayPose(poseKeys[poseChanger.currentPose]);
+            guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
         }
     }
 
