@@ -111,7 +111,7 @@ public class TrackerHandler : MonoBehaviour
     {
         //this is an array in case you want to get the n closest bodies
         int closestBody = findClosestTrackedBody(trackerFrameData);
-
+        
 
         // render the closest body
         Body skeleton = trackerFrameData.Bodies[closestBody];
@@ -126,55 +126,31 @@ public class TrackerHandler : MonoBehaviour
         {
             skeleton.JointPositions3D[i] = new System.Numerics.Vector3(skeleton.JointPositions3D[i].X + kinectDiff.X, skeleton.JointPositions3D[i].Y, skeleton.JointPositions3D[i].Z + kinectDiff.Z);
         }
-
+        
 
         if (poseSaver.activeSelf)
         {
-            Debug.Log("Saving!");
             saveCurrentPose(skeleton);
             poseSaver.SetActive(false);
-            Debug.Log("Saved!");
         }
 
-        renderSkeleton(skeleton, 0);
+        renderSkeleton(skeleton, 0, diff);
     }
 
     public void saveCurrentPose(Body skeleton)
     {
-        saveCurrentPoseRotation(skeleton);
-        string poseFilePath = "C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
-        //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
+        string poseFilePath = "C:/Users/vrcart03/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
+                               //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
         string seperator = ",";
         StringBuilder outputString = new StringBuilder();
 
         string[] positions = new string[skeleton.JointPositions3D.Length];
 
-        for (int i = 0; i < skeleton.JointPositions3D.Length; i++)
+        for(int i=0; i< skeleton.JointPositions3D.Length; i++)
         {
-            positions[i] = string.Join(seperator, skeleton.JointPositions3D[i]).Trim('<', '>');
+            positions[i] = string.Join(seperator, skeleton.JointPositions3D[i]);
         }
-
-        outputString.AppendLine(string.Join(seperator, positions));
-
-        string trimmedOutput = outputString.ToString().Trim('<', '>');
-
-        File.AppendAllText(poseFilePath, trimmedOutput);
-    }
-
-    public void saveCurrentPoseRotation(Body skeleton)
-    {
-        string poseFilePath = "C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesRotationsFile.csv";
-        //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
-        string seperator = ",";
-        StringBuilder outputString = new StringBuilder();
-
-        string[] positions = new string[skeleton.JointRotations.Length];
-
-        for (int i = 0; i < skeleton.JointRotations.Length; i++)
-        {
-            positions[i] = string.Join(seperator, skeleton.JointRotations[i]).Trim('<', '>');
-        }
-
+    
         outputString.AppendLine(string.Join(seperator, positions));
 
         string trimmedOutput = outputString.ToString().Trim('<', '>');
@@ -225,9 +201,9 @@ public class TrackerHandler : MonoBehaviour
         }
     }
 
-    public void renderSkeleton(Body skeleton, int skeletonNumber)
+    public void renderSkeleton(Body skeleton, int skeletonNumber, Vector3 diff)
     {
-        
+        System.Numerics.Vector3 kinectDiff = new System.Numerics.Vector3(diff.x, diff.y, diff.z);
         for (int jointNum = 0; jointNum < (int)JointId.Count; jointNum++)
         {
             Vector3 jointPos = new Vector3(skeleton.JointPositions3D[jointNum].X, -skeleton.JointPositions3D[jointNum].Y, skeleton.JointPositions3D[jointNum].Z);
@@ -272,12 +248,9 @@ public class TrackerHandler : MonoBehaviour
             parentJointRotationBodySpace = absoluteJointRotations[(int)parent];
         }
         Quaternion jointRotationBodySpace = absoluteJointRotations[(int)jointId];
-        Quaternion relativeRotation = Quaternion.Inverse(parentJointRotationBodySpace) * jointRotationBodySpace;
+        Quaternion relativeRotation =  Quaternion.Inverse(parentJointRotationBodySpace) * jointRotationBodySpace;
 
         return relativeRotation;
     }
 
 }
-
-
-
