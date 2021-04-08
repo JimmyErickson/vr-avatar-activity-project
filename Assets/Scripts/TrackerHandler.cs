@@ -13,7 +13,7 @@ public class TrackerHandler : MonoBehaviour
     public bool drawSkeletons = true;
     Quaternion Y_180_FLIP = new Quaternion(0.0f, 1.0f, 0, 90.0f);
     public GameObject headset;
-    //public GameObject poseSaver;
+    public GameObject poseSaver;
 
     // Start is called before the first frame update
     void Awake()

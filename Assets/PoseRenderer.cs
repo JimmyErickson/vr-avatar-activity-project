@@ -34,17 +34,8 @@ public class PoseRenderer : MonoBehaviour
     {
         if (renderPose.activeSelf)
         {
-            if(poseChanger.currentPose > poses.Count - 1)
-            {
-                DisplayPose(poseKeys[poseChanger.currentPose % 3]);
-                guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose % 3);
-            }
-            else
-            {
-                DisplayPose(poseKeys[poseChanger.currentPose]);
-                guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
-            }
-            
+            DisplayPose(poseKeys[poseChanger.currentPose]);
+            guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
         }
     }
 
@@ -140,7 +131,7 @@ public class PoseRenderer : MonoBehaviour
                         
                         for(int j=0; j<4; j++) {
                             splitOnColon[j] = float.Parse(splitOnSpace[j].Split(':')[1].Trim('}'));
-                            
+                            Debug.Log("check 1");
                         }
                         
                         jointRotations[i] = new System.Numerics.Quaternion(splitOnColon[0], splitOnColon[1], splitOnColon[2], splitOnColon[3]);
