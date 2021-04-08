@@ -8,8 +8,7 @@ using System.Text;
 
 public class TrackerHandler : MonoBehaviour
 {
-    public Dictionary<JointId, JointId> parentJointMap;
-    Dictionary<JointId, Quaternion> basisJointMap;
+    
     public Quaternion[] absoluteJointRotations = new Quaternion[(int)JointId.Count];
     public bool drawSkeletons = true;
     Quaternion Y_180_FLIP = new Quaternion(0.0f, 1.0f, 0, 90.0f);
@@ -19,41 +18,41 @@ public class TrackerHandler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        parentJointMap = new Dictionary<JointId, JointId>();
+        BodyReference.parentJointMap = new Dictionary<JointId, JointId>();
 
         // pelvis has no parent so set to count
-        parentJointMap[JointId.Pelvis] = JointId.Count;
-        parentJointMap[JointId.SpineNavel] = JointId.Pelvis;
-        parentJointMap[JointId.SpineChest] = JointId.SpineNavel;
-        parentJointMap[JointId.Neck] = JointId.SpineChest;
-        parentJointMap[JointId.ClavicleLeft] = JointId.SpineChest;
-        parentJointMap[JointId.ShoulderLeft] = JointId.ClavicleLeft;
-        parentJointMap[JointId.ElbowLeft] = JointId.ShoulderLeft;
-        parentJointMap[JointId.WristLeft] = JointId.ElbowLeft;
-        parentJointMap[JointId.HandLeft] = JointId.WristLeft;
-        parentJointMap[JointId.HandTipLeft] = JointId.HandLeft;
-        parentJointMap[JointId.ThumbLeft] = JointId.HandLeft;
-        parentJointMap[JointId.ClavicleRight] = JointId.SpineChest;
-        parentJointMap[JointId.ShoulderRight] = JointId.ClavicleRight;
-        parentJointMap[JointId.ElbowRight] = JointId.ShoulderRight;
-        parentJointMap[JointId.WristRight] = JointId.ElbowRight;
-        parentJointMap[JointId.HandRight] = JointId.WristRight;
-        parentJointMap[JointId.HandTipRight] = JointId.HandRight;
-        parentJointMap[JointId.ThumbRight] = JointId.HandRight;
-        parentJointMap[JointId.HipLeft] = JointId.SpineNavel;
-        parentJointMap[JointId.KneeLeft] = JointId.HipLeft;
-        parentJointMap[JointId.AnkleLeft] = JointId.KneeLeft;
-        parentJointMap[JointId.FootLeft] = JointId.AnkleLeft;
-        parentJointMap[JointId.HipRight] = JointId.SpineNavel;
-        parentJointMap[JointId.KneeRight] = JointId.HipRight;
-        parentJointMap[JointId.AnkleRight] = JointId.KneeRight;
-        parentJointMap[JointId.FootRight] = JointId.AnkleRight;
-        parentJointMap[JointId.Head] = JointId.Pelvis;
-        parentJointMap[JointId.Nose] = JointId.Head;
-        parentJointMap[JointId.EyeLeft] = JointId.Head;
-        parentJointMap[JointId.EarLeft] = JointId.Head;
-        parentJointMap[JointId.EyeRight] = JointId.Head;
-        parentJointMap[JointId.EarRight] = JointId.Head;
+        BodyReference.parentJointMap[JointId.Pelvis] = JointId.Count;
+        BodyReference.parentJointMap[JointId.SpineNavel] = JointId.Pelvis;
+        BodyReference.parentJointMap[JointId.SpineChest] = JointId.SpineNavel;
+        BodyReference.parentJointMap[JointId.Neck] = JointId.SpineChest;
+        BodyReference.parentJointMap[JointId.ClavicleLeft] = JointId.SpineChest;
+        BodyReference.parentJointMap[JointId.ShoulderLeft] = JointId.ClavicleLeft;
+        BodyReference.parentJointMap[JointId.ElbowLeft] = JointId.ShoulderLeft;
+        BodyReference.parentJointMap[JointId.WristLeft] = JointId.ElbowLeft;
+        BodyReference.parentJointMap[JointId.HandLeft] = JointId.WristLeft;
+        BodyReference.parentJointMap[JointId.HandTipLeft] = JointId.HandLeft;
+        BodyReference.parentJointMap[JointId.ThumbLeft] = JointId.HandLeft;
+        BodyReference.parentJointMap[JointId.ClavicleRight] = JointId.SpineChest;
+        BodyReference.parentJointMap[JointId.ShoulderRight] = JointId.ClavicleRight;
+        BodyReference.parentJointMap[JointId.ElbowRight] = JointId.ShoulderRight;
+        BodyReference.parentJointMap[JointId.WristRight] = JointId.ElbowRight;
+        BodyReference.parentJointMap[JointId.HandRight] = JointId.WristRight;
+        BodyReference.parentJointMap[JointId.HandTipRight] = JointId.HandRight;
+        BodyReference.parentJointMap[JointId.ThumbRight] = JointId.HandRight;
+        BodyReference.parentJointMap[JointId.HipLeft] = JointId.SpineNavel;
+        BodyReference.parentJointMap[JointId.KneeLeft] = JointId.HipLeft;
+        BodyReference.parentJointMap[JointId.AnkleLeft] = JointId.KneeLeft;
+        BodyReference.parentJointMap[JointId.FootLeft] = JointId.AnkleLeft;
+        BodyReference.parentJointMap[JointId.HipRight] = JointId.SpineNavel;
+        BodyReference.parentJointMap[JointId.KneeRight] = JointId.HipRight;
+        BodyReference.parentJointMap[JointId.AnkleRight] = JointId.KneeRight;
+        BodyReference.parentJointMap[JointId.FootRight] = JointId.AnkleRight;
+        BodyReference.parentJointMap[JointId.Head] = JointId.Pelvis;
+        BodyReference.parentJointMap[JointId.Nose] = JointId.Head;
+        BodyReference.parentJointMap[JointId.EyeLeft] = JointId.Head;
+        BodyReference.parentJointMap[JointId.EarLeft] = JointId.Head;
+        BodyReference.parentJointMap[JointId.EyeRight] = JointId.Head;
+        BodyReference.parentJointMap[JointId.EarRight] = JointId.Head;
 
         Vector3 zpositive = Vector3.forward;
         Vector3 xpositive = Vector3.right;
@@ -70,41 +69,41 @@ public class TrackerHandler : MonoBehaviour
         Quaternion leftFootBasis = Quaternion.LookRotation(xpositive, ypositive);
         Quaternion rightFootBasis = Quaternion.LookRotation(xpositive, -ypositive);
 
-        basisJointMap = new Dictionary<JointId, Quaternion>();
+        BodyReference.basisJointMap = new Dictionary<JointId, Quaternion>();
 
         // pelvis has no parent so set to count
-        basisJointMap[JointId.Pelvis] = spineHipBasis;
-        basisJointMap[JointId.SpineNavel] = spineHipBasis;
-        basisJointMap[JointId.SpineChest] = spineHipBasis;
-        basisJointMap[JointId.Neck] = spineHipBasis;
-        basisJointMap[JointId.ClavicleLeft] = leftArmBasis;
-        basisJointMap[JointId.ShoulderLeft] = leftArmBasis;
-        basisJointMap[JointId.ElbowLeft] = leftArmBasis;
-        basisJointMap[JointId.WristLeft] = leftHandBasis;
-        basisJointMap[JointId.HandLeft] = leftHandBasis;
-        basisJointMap[JointId.HandTipLeft] = leftHandBasis;
-        basisJointMap[JointId.ThumbLeft] = leftArmBasis;
-        basisJointMap[JointId.ClavicleRight] = rightArmBasis;
-        basisJointMap[JointId.ShoulderRight] = rightArmBasis;
-        basisJointMap[JointId.ElbowRight] = rightArmBasis;
-        basisJointMap[JointId.WristRight] = rightHandBasis;
-        basisJointMap[JointId.HandRight] = rightHandBasis;
-        basisJointMap[JointId.HandTipRight] = rightHandBasis;
-        basisJointMap[JointId.ThumbRight] = rightArmBasis;
-        basisJointMap[JointId.HipLeft] = leftHipBasis;
-        basisJointMap[JointId.KneeLeft] = leftHipBasis;
-        basisJointMap[JointId.AnkleLeft] = leftHipBasis;
-        basisJointMap[JointId.FootLeft] = leftFootBasis;
-        basisJointMap[JointId.HipRight] = rightHipBasis;
-        basisJointMap[JointId.KneeRight] = rightHipBasis;
-        basisJointMap[JointId.AnkleRight] = rightHipBasis;
-        basisJointMap[JointId.FootRight] = rightFootBasis;
-        basisJointMap[JointId.Head] = spineHipBasis;
-        basisJointMap[JointId.Nose] = spineHipBasis;
-        basisJointMap[JointId.EyeLeft] = spineHipBasis;
-        basisJointMap[JointId.EarLeft] = spineHipBasis;
-        basisJointMap[JointId.EyeRight] = spineHipBasis;
-        basisJointMap[JointId.EarRight] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.Pelvis] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.SpineNavel] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.SpineChest] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.Neck] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.ClavicleLeft] = leftArmBasis;
+        BodyReference.basisJointMap[JointId.ShoulderLeft] = leftArmBasis;
+        BodyReference.basisJointMap[JointId.ElbowLeft] = leftArmBasis;
+        BodyReference.basisJointMap[JointId.WristLeft] = leftHandBasis;
+        BodyReference.basisJointMap[JointId.HandLeft] = leftHandBasis;
+        BodyReference.basisJointMap[JointId.HandTipLeft] = leftHandBasis;
+        BodyReference.basisJointMap[JointId.ThumbLeft] = leftArmBasis;
+        BodyReference.basisJointMap[JointId.ClavicleRight] = rightArmBasis;
+        BodyReference.basisJointMap[JointId.ShoulderRight] = rightArmBasis;
+        BodyReference.basisJointMap[JointId.ElbowRight] = rightArmBasis;
+        BodyReference.basisJointMap[JointId.WristRight] = rightHandBasis;
+        BodyReference.basisJointMap[JointId.HandRight] = rightHandBasis;
+        BodyReference.basisJointMap[JointId.HandTipRight] = rightHandBasis;
+        BodyReference.basisJointMap[JointId.ThumbRight] = rightArmBasis;
+        BodyReference.basisJointMap[JointId.HipLeft] = leftHipBasis;
+        BodyReference.basisJointMap[JointId.KneeLeft] = leftHipBasis;
+        BodyReference.basisJointMap[JointId.AnkleLeft] = leftHipBasis;
+        BodyReference.basisJointMap[JointId.FootLeft] = leftFootBasis;
+        BodyReference.basisJointMap[JointId.HipRight] = rightHipBasis;
+        BodyReference.basisJointMap[JointId.KneeRight] = rightHipBasis;
+        BodyReference.basisJointMap[JointId.AnkleRight] = rightHipBasis;
+        BodyReference.basisJointMap[JointId.FootRight] = rightFootBasis;
+        BodyReference.basisJointMap[JointId.Head] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.Nose] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.EyeLeft] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.EarLeft] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.EyeRight] = spineHipBasis;
+        BodyReference.basisJointMap[JointId.EarRight] = spineHipBasis;
     }
 
     public void updateTracker(BackgroundData trackerFrameData)
@@ -127,13 +126,13 @@ public class TrackerHandler : MonoBehaviour
             skeleton.JointPositions3D[i] = new System.Numerics.Vector3(skeleton.JointPositions3D[i].X + kinectDiff.X, skeleton.JointPositions3D[i].Y, skeleton.JointPositions3D[i].Z + kinectDiff.Z);
         }
         
-
-        if (poseSaver.activeSelf)
-        {
-            saveCurrentPose(skeleton);
-            poseSaver.SetActive(false);
-        }
-
+        //Keep this, it's for saving poses.
+        //if (poseSaver.activeSelf)
+        //{
+        //    saveCurrentPose(skeleton);
+        //    poseSaver.SetActive(false);
+        //}
+        PlayerBody.playerPos = skeleton;
         renderSkeleton(skeleton, 0, diff);
     }
 
@@ -210,17 +209,17 @@ public class TrackerHandler : MonoBehaviour
             Vector3 offsetPosition = transform.rotation * jointPos;
             Vector3 positionInTrackerRootSpace = transform.position + offsetPosition;
             Quaternion jointRot = Y_180_FLIP * new Quaternion(skeleton.JointRotations[jointNum].X, -skeleton.JointRotations[jointNum].Y,
-                skeleton.JointRotations[jointNum].Z, skeleton.JointRotations[jointNum].W) * Quaternion.Inverse(basisJointMap[(JointId)jointNum]);
+                skeleton.JointRotations[jointNum].Z, skeleton.JointRotations[jointNum].W) * Quaternion.Inverse(BodyReference.basisJointMap[(JointId)jointNum]);
             absoluteJointRotations[jointNum] = jointRot;
             // these are absolute body space because each joint has the body root for a parent in the scene graph
             transform.GetChild(skeletonNumber).GetChild(jointNum).localPosition = jointPos;
             transform.GetChild(skeletonNumber).GetChild(jointNum).localRotation = jointRot;
 
             const int boneChildNum = 0;
-            if (parentJointMap[(JointId)jointNum] != JointId.Head && parentJointMap[(JointId)jointNum] != JointId.Count)
+            if (BodyReference.parentJointMap[(JointId)jointNum] != JointId.Head && BodyReference.parentJointMap[(JointId)jointNum] != JointId.Count)
             {
-                Vector3 parentTrackerSpacePosition = new Vector3(skeleton.JointPositions3D[(int)parentJointMap[(JointId)jointNum]].X,
-                    -skeleton.JointPositions3D[(int)parentJointMap[(JointId)jointNum]].Y, skeleton.JointPositions3D[(int)parentJointMap[(JointId)jointNum]].Z);
+                Vector3 parentTrackerSpacePosition = new Vector3(skeleton.JointPositions3D[(int)BodyReference.parentJointMap[(JointId)jointNum]].X,
+                    -skeleton.JointPositions3D[(int)BodyReference.parentJointMap[(JointId)jointNum]].Y, skeleton.JointPositions3D[(int)BodyReference.parentJointMap[(JointId)jointNum]].Z);
                 Vector3 boneDirectionTrackerSpace = jointPos - parentTrackerSpacePosition;
                 Vector3 boneDirectionWorldSpace = transform.rotation * boneDirectionTrackerSpace;
                 Vector3 boneDirectionLocalSpace = Quaternion.Inverse(transform.GetChild(skeletonNumber).GetChild(jointNum).rotation) * Vector3.Normalize(boneDirectionWorldSpace);
@@ -237,7 +236,7 @@ public class TrackerHandler : MonoBehaviour
 
     public Quaternion GetRelativeJointRotation(JointId jointId)
     {
-        JointId parent = parentJointMap[jointId];
+        JointId parent = BodyReference.parentJointMap[jointId];
         Quaternion parentJointRotationBodySpace = Quaternion.identity;
         if (parent == JointId.Count)
         {
@@ -254,3 +253,106 @@ public class TrackerHandler : MonoBehaviour
     }
 
 }
+
+public static class PlayerBody{
+    public static Body playerPos;
+    public static Body guidePos;
+}
+
+public static class BodyReference{
+    public static Dictionary<JointId, JointId> parentJointMap;
+    public static Dictionary<JointId, Quaternion> basisJointMap;
+
+    
+    
+}
+
+/*
+parentJointMap = new Dictionary<JointId, JointId>();
+
+    // pelvis has no parent so set to count
+    parentJointMap[JointId.Pelvis] = JointId.Count;
+    parentJointMap[JointId.SpineNavel] = JointId.Pelvis;
+    parentJointMap[JointId.SpineChest] = JointId.SpineNavel;
+    parentJointMap[JointId.Neck] = JointId.SpineChest;
+    parentJointMap[JointId.ClavicleLeft] = JointId.SpineChest;
+    parentJointMap[JointId.ShoulderLeft] = JointId.ClavicleLeft;
+    parentJointMap[JointId.ElbowLeft] = JointId.ShoulderLeft;
+    parentJointMap[JointId.WristLeft] = JointId.ElbowLeft;
+    parentJointMap[JointId.HandLeft] = JointId.WristLeft;
+    parentJointMap[JointId.HandTipLeft] = JointId.HandLeft;
+    parentJointMap[JointId.ThumbLeft] = JointId.HandLeft;
+    parentJointMap[JointId.ClavicleRight] = JointId.SpineChest;
+    parentJointMap[JointId.ShoulderRight] = JointId.ClavicleRight;
+    parentJointMap[JointId.ElbowRight] = JointId.ShoulderRight;
+    parentJointMap[JointId.WristRight] = JointId.ElbowRight;
+    parentJointMap[JointId.HandRight] = JointId.WristRight;
+    parentJointMap[JointId.HandTipRight] = JointId.HandRight;
+    parentJointMap[JointId.ThumbRight] = JointId.HandRight;
+    parentJointMap[JointId.HipLeft] = JointId.SpineNavel;
+    parentJointMap[JointId.KneeLeft] = JointId.HipLeft;
+    parentJointMap[JointId.AnkleLeft] = JointId.KneeLeft;
+    parentJointMap[JointId.FootLeft] = JointId.AnkleLeft;
+    parentJointMap[JointId.HipRight] = JointId.SpineNavel;
+    parentJointMap[JointId.KneeRight] = JointId.HipRight;
+    parentJointMap[JointId.AnkleRight] = JointId.KneeRight;
+    parentJointMap[JointId.FootRight] = JointId.AnkleRight;
+    parentJointMap[JointId.Head] = JointId.Pelvis;
+    parentJointMap[JointId.Nose] = JointId.Head;
+    parentJointMap[JointId.EyeLeft] = JointId.Head;
+    parentJointMap[JointId.EarLeft] = JointId.Head;
+    parentJointMap[JointId.EyeRight] = JointId.Head;
+    parentJointMap[JointId.EarRight] = JointId.Head;
+
+    Vector3 zpositive = Vector3.forward;
+    Vector3 xpositive = Vector3.right;
+    Vector3 ypositive = Vector3.up;
+    // spine and left hip are the same
+    Quaternion leftHipBasis = Quaternion.LookRotation(xpositive, -zpositive);
+    Quaternion spineHipBasis = Quaternion.LookRotation(xpositive, -zpositive);
+    Quaternion rightHipBasis = Quaternion.LookRotation(xpositive, zpositive);
+    // arms and thumbs share the same basis
+    Quaternion leftArmBasis = Quaternion.LookRotation(ypositive, -zpositive);
+    Quaternion rightArmBasis = Quaternion.LookRotation(-ypositive, zpositive);
+    Quaternion leftHandBasis = Quaternion.LookRotation(-zpositive, -ypositive);
+    Quaternion rightHandBasis = Quaternion.identity;
+    Quaternion leftFootBasis = Quaternion.LookRotation(xpositive, ypositive);
+    Quaternion rightFootBasis = Quaternion.LookRotation(xpositive, -ypositive);
+
+    basisJointMap = new Dictionary<JointId, Quaternion>();
+
+    // pelvis has no parent so set to count
+    basisJointMap[JointId.Pelvis] = spineHipBasis;
+    basisJointMap[JointId.SpineNavel] = spineHipBasis;
+    basisJointMap[JointId.SpineChest] = spineHipBasis;
+    basisJointMap[JointId.Neck] = spineHipBasis;
+    basisJointMap[JointId.ClavicleLeft] = leftArmBasis;
+    basisJointMap[JointId.ShoulderLeft] = leftArmBasis;
+    basisJointMap[JointId.ElbowLeft] = leftArmBasis;
+    basisJointMap[JointId.WristLeft] = leftHandBasis;
+    basisJointMap[JointId.HandLeft] = leftHandBasis;
+    basisJointMap[JointId.HandTipLeft] = leftHandBasis;
+    basisJointMap[JointId.ThumbLeft] = leftArmBasis;
+    basisJointMap[JointId.ClavicleRight] = rightArmBasis;
+    basisJointMap[JointId.ShoulderRight] = rightArmBasis;
+    basisJointMap[JointId.ElbowRight] = rightArmBasis;
+    basisJointMap[JointId.WristRight] = rightHandBasis;
+    basisJointMap[JointId.HandRight] = rightHandBasis;
+    basisJointMap[JointId.HandTipRight] = rightHandBasis;
+    basisJointMap[JointId.ThumbRight] = rightArmBasis;
+    basisJointMap[JointId.HipLeft] = leftHipBasis;
+    basisJointMap[JointId.KneeLeft] = leftHipBasis;
+    basisJointMap[JointId.AnkleLeft] = leftHipBasis;
+    basisJointMap[JointId.FootLeft] = leftFootBasis;
+    basisJointMap[JointId.HipRight] = rightHipBasis;
+    basisJointMap[JointId.KneeRight] = rightHipBasis;
+    basisJointMap[JointId.AnkleRight] = rightHipBasis;
+    basisJointMap[JointId.FootRight] = rightFootBasis;
+    basisJointMap[JointId.Head] = spineHipBasis;
+    basisJointMap[JointId.Nose] = spineHipBasis;
+    basisJointMap[JointId.EyeLeft] = spineHipBasis;
+    basisJointMap[JointId.EarLeft] = spineHipBasis;
+    basisJointMap[JointId.EyeRight] = spineHipBasis;
+    basisJointMap[JointId.EarRight] = spineHipBasis;
+    */
+    
