@@ -12,6 +12,7 @@ public class distanceTracker : MonoBehaviour
     public Material green;
     public Material red;
     private float timer = 0;
+    public float timerMax;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +71,7 @@ public class distanceTracker : MonoBehaviour
                 parts[i].GetComponent<MeshRenderer>().material = red;
             }
         }
-        if (timer >= 3.0)
+        if (timer >= timerMax)
         {
             timer = 0;
             Debug.Log("Yay you did it!");
