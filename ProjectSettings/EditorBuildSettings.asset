@@ -4,10 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Airbending.unity
-    guid: 28c64e09bdf86844a9b36aa81aa7aef0
+  m_Scenes: []
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 1a7972dd0157be94584827f7a5dcd441, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d25bb5c1281ea7f429d91e2a541538a8, type: 2}

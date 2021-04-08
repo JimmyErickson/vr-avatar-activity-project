@@ -19,7 +19,6 @@ public class PoseRenderer : MonoBehaviour
     public GameObject renderPose;
     private List<string> poseKeys;
     public GameObject guideAvatar;
-    public GameObject playerBody;
 
 
     // Start is called before the first frame update
@@ -35,17 +34,8 @@ public class PoseRenderer : MonoBehaviour
     {
         if (renderPose.activeSelf)
         {
-            if(poseChanger.currentPose > poses.Count - 1)
-            {
-                DisplayPose(poseKeys[poseChanger.currentPose % 3]);
-                guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose % 3);
-            }
-            else
-            {
-                DisplayPose(poseKeys[poseChanger.currentPose]);
-                guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
-            }
-            
+            DisplayPose(poseKeys[poseChanger.currentPose]);
+            guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
         }
     }
 
@@ -145,17 +135,7 @@ public class PoseRenderer : MonoBehaviour
         Body examplePose = new Body(poses[poseKey].Length);
         examplePose.JointPositions3D = poses[poseKey];
         examplePose.JointRotations = poseRotations[poseKey];
-
-        Vector3 playerPelvis = playerBody.transform.GetChild(0).transform.position;
-        //Vector3 headPos = new Vector3(skeleton.JointPositions3D[(int)JointId.Head].X, skeleton.JointPositions3D[(int)JointId.Head].Y, skeleton.JointPositions3D[(int)JointId.Head].Z);
-        Vector3 pelvis = new Vector3(examplePose.JointPositions3D[(int)JointId.Pelvis].X, examplePose.JointPositions3D[(int)JointId.Pelvis].Y, examplePose.JointPositions3D[(int)JointId.Pelvis].Z);
-        Vector3 diff = playerPelvis - pelvis;
-        System.Numerics.Vector3 kinectDiff = new System.Numerics.Vector3(diff.x, diff.y, diff.z);
-        for (int i = 0; i < examplePose.JointPositions3D.Length; i++)
-        {
-            examplePose.JointPositions3D[i] = new System.Numerics.Vector3(examplePose.JointPositions3D[i].X + kinectDiff.X, examplePose.JointPositions3D[i].Y, examplePose.JointPositions3D[i].Z + kinectDiff.Z);
-        }
-
+        
         renderSkeleton(examplePose, 0);
     }
 
@@ -230,7 +210,7 @@ public class PoseRenderer : MonoBehaviour
                         
                         for(int j=0; j<4; j++) {
                             splitOnColon[j] = float.Parse(splitOnSpace[j].Split(':')[1].Trim('}'));
-                            
+                            Debug.Log("check 1");
                         }
                         
                         jointRotations[i] = new System.Numerics.Quaternion(splitOnColon[0], splitOnColon[1], splitOnColon[2], splitOnColon[3]);
