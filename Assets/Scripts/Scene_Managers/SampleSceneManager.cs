@@ -30,14 +30,9 @@ public class SampleSceneManager : MonoBehaviour
         poseChanger.setPoseBody(poseChangerObject);
         poseChanger.LoadData();
         poseChanger.currentPose = 0;
-        poseKeys = new List<string>(poseChanger.poses.Keys);
+        List<string> unfilteredPoseKeys = new List<string>(poseChanger.poses.Keys);
+        poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("TaiChi"));
     }
-
-    
-   
-    // Start is called before the first frame update
-  
-
     // Update is called once per frame
     void Update()
     {

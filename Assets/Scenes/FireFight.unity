@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 23521431}
   - component: {fileID: 23521430}
   - component: {fileID: 23521429}
-  - component: {fileID: 23521428}
   - component: {fileID: 23521427}
   m_Layer: 0
   m_Name: Main
@@ -152,65 +151,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 23521426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd3fb53b6d8ef12418dbe9e45e3609d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 59ba8a1e5700ea348869e6f08ba967cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  absoluteJointRotations:
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  - {x: 0, y: 0, z: 0, w: 0}
-  drawSkeletons: 1
-  poseDescription: 
-  positions: []
   tolerance: 0
   timerMax: 0
   rHandFlame: {fileID: 0}
   lHandFlame: {fileID: 0}
---- !u!114 &23521428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23521426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e8d311672fecef43b962ab28702d297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerBody: {fileID: 1498317527}
-  tolerance: 0.5
-  green: {fileID: 2100000, guid: a57167be094e5f3498f50de4d8d5d60f, type: 2}
-  red: {fileID: 2100000, guid: bd6b6d11c48709d409751661caa7e006, type: 2}
+  poseBody: {fileID: 0}
 --- !u!114 &23521429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5940,11 +5888,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019b917704c3c29478d778e143d411d2, type: 3}
---- !u!1 &1498317527 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 325103643, guid: 019b917704c3c29478d778e143d411d2, type: 3}
-  m_PrefabInstance: {fileID: 1498317526}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1498317528 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 430270598, guid: 019b917704c3c29478d778e143d411d2, type: 3}
