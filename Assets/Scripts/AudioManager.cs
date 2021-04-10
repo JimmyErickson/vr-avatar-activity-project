@@ -43,17 +43,17 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-
+        // to play sounds in other scripts use: FindObjectOfType<AudioManager>().Play("");
         string scene = SceneManager.GetActiveScene().name;
 
         Play("Theme");
         if (scene == "OpeningScene")
         {
             Play("Introduction");
-            if (/*pose == menu*/)
+            /*if (pose == menu)
             {
                 Play("Menu");
-            }
+            }*/
         }
     }
 }
