@@ -50,10 +50,10 @@ public class AudioManager : MonoBehaviour
         if (scene == "OpeningScene")
         {
             Play("Introduction");
-            if (/*pose == menu*/)
-            {
-                Play("Menu");
-            }
+            //if (/*pose == menu*/)
+            //{
+            //    Play("Menu");
+            //}
         }
     }
 }

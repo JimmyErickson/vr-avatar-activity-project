@@ -22,7 +22,8 @@ public class FireFightSceneManager : MonoBehaviour
         poseChanger.setPoseBody(poseBody);
         poseChanger.LoadData();
         poseChanger.currentPose = 0;
-        poseKeys = new List<string>(poseChanger.poses.Keys);
+        List<string> unfilteredPoseKeys = new List<string>(poseChanger.poses.Keys);
+        poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("FireFight"));
     }
 
     void Update()
@@ -40,6 +41,7 @@ public class FireFightSceneManager : MonoBehaviour
             Body examplePose = new Body(poseChanger.poses[poseKey].Length);
             examplePose.JointPositions3D = poseChanger.poses[poseKey];
             examplePose.JointRotations = poseChanger.poseRotations[poseKey];
+            poseChanger.DisplayPoseRelative(poseKey);
             System.Numerics.Vector3 pelvis = examplePose.JointPositions3D[(int)JointId.Pelvis];
             System.Numerics.Vector3 diff = playerPelvis - pelvis;
             for (int i = 0; i < examplePose.JointPositions3D.Length; i++)
@@ -47,6 +49,7 @@ public class FireFightSceneManager : MonoBehaviour
 
                 examplePose.JointPositions3D[i] = new System.Numerics.Vector3(examplePose.JointPositions3D[i].X + diff.X, examplePose.JointPositions3D[i].Y, examplePose.JointPositions3D[i].Z + diff.Z);
             }
+            
             firePoses.Add(examplePose);
         }
     }
