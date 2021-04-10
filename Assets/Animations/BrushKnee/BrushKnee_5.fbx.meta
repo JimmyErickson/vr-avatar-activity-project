@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d0c6dc923a5d04144b7aca93957ba054
+guid: fe440012205bd1640adaf645af482307
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 4293408614859959432
-    second: Part2
+      74: -1687210433439250922
+    second: BrushKnee_5
   externalObjects: {}
   materials:
     materialImportMode: 2

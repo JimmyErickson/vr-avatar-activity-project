@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: a4a62075a20a18b47a880dc588d0a5df
+guid: 6e2786efe78469645b5629975d728bdb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -9148399844766833832
-    second: Part1
+      74: -6377546321994896238
+    second: RepulseMonkey_3
   externalObjects: {}
   materials:
     materialImportMode: 2
