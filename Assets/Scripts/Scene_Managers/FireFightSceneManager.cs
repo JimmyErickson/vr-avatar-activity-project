@@ -53,7 +53,7 @@ public class FireFightSceneManager : MonoBehaviour
 
     public void CheckMoves()
     {
-
+        CheckWideStance();
     }
 
     public void CheckWideStance()
