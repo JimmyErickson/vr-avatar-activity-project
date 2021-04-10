@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        // Persistent game object allows for seamless music, may want to remove if we want different music for each scene.
         DontDestroyOnLoad(gameObject);
         if(instance == null)
         {
@@ -41,6 +43,17 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+
+        string scene = SceneManager.GetActiveScene().name;
+
         Play("Theme");
+        if (scene == "OpeningScene")
+        {
+            Play("Introduction");
+            if (/*pose == menu*/)
+            {
+                Play("Menu");
+            }
+        }
     }
 }
