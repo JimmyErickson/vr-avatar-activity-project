@@ -74,6 +74,7 @@
      <Compile Include="Assets\Config\Configs.cs" />
      <Compile Include="Assets\Scripts\PuppetAvatar.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Scene_Managers\OpeningSceneManager.cs" />
      <Compile Include="Assets\Skeleton\CameraFlipper.cs" />
      <Compile Include="Assets\Scripts\Skeleton_Stuff\BackgroundData.cs" />
      <Compile Include="Assets\Skybox\ColorSkies\Demo\Scripts\SkyboxChanger.cs" />
