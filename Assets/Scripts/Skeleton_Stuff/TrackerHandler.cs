@@ -13,7 +13,7 @@ public class TrackerHandler : MonoBehaviour
     public bool drawSkeletons = true;
     Quaternion Y_180_FLIP = new Quaternion(0.0f, 1.0f, 0, 90.0f);
     public GameObject headset;
-    public GameObject poseSaver;
+    //public GameObject poseSaver;
 
     // Start is called before the first frame update
     void Awake()
@@ -127,29 +127,51 @@ public class TrackerHandler : MonoBehaviour
         }
         
         //Keep this, it's for saving poses.
-        //if (poseSaver.activeSelf)
-        //{
-        //    saveCurrentPose(skeleton);
-        //    poseSaver.SetActive(false);
-        //}
+        /*if (poseSaver.activeSelf)
+        {
+            saveCurrentPose(skeleton);
+            poseSaver.SetActive(false);
+        }*/
         PlayerBody.playerPos = skeleton;
         renderSkeleton(skeleton, 0, diff);
     }
 
     public void saveCurrentPose(Body skeleton)
     {
-        string poseFilePath = "C:/Users/vrcart03/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
-                               //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
+        saveCurrentPoseRotation(skeleton);
+        string poseFilePath = "C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
+        //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
         string seperator = ",";
         StringBuilder outputString = new StringBuilder();
 
         string[] positions = new string[skeleton.JointPositions3D.Length];
 
-        for(int i=0; i< skeleton.JointPositions3D.Length; i++)
+        for (int i = 0; i < skeleton.JointPositions3D.Length; i++)
         {
-            positions[i] = string.Join(seperator, skeleton.JointPositions3D[i]);
+            positions[i] = string.Join(seperator, skeleton.JointPositions3D[i]).Trim('<', '>');
         }
-    
+
+        outputString.AppendLine(string.Join(seperator, positions));
+
+        string trimmedOutput = outputString.ToString().Trim('<', '>');
+
+        File.AppendAllText(poseFilePath, trimmedOutput);
+    }
+
+    public void saveCurrentPoseRotation(Body skeleton)
+    {
+        string poseFilePath = "C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesRotationsFile.csv";
+        //C:\Users\vrcart03\Desktop\vr - avatar - activity - project\Assets\Poses
+        string seperator = ",";
+        StringBuilder outputString = new StringBuilder();
+
+        string[] positions = new string[skeleton.JointRotations.Length];
+
+        for (int i = 0; i < skeleton.JointRotations.Length; i++)
+        {
+            positions[i] = string.Join(seperator, skeleton.JointRotations[i]).Trim('<', '>');
+        }
+
         outputString.AppendLine(string.Join(seperator, positions));
 
         string trimmedOutput = outputString.ToString().Trim('<', '>');

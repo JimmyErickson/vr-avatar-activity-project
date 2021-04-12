@@ -99,7 +99,7 @@ public static class poseChanger
                         for (int j = 0; j < 4; j++)
                         {
                             splitOnColon[j] = float.Parse(splitOnSpace[j].Split(':')[1].Trim('}'));
-                            Debug.Log("check 1");
+                            
                         }
 
                         jointRotations[i] = new System.Numerics.Quaternion(splitOnColon[0], splitOnColon[1], splitOnColon[2], splitOnColon[3]);

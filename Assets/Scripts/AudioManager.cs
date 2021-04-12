@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
+    public GameObject menu;
 
     private void Awake()
     {
@@ -54,6 +55,10 @@ public class AudioManager : MonoBehaviour
             {
                 Play("Menu");
             }*/
+            if (menu.activeInHierarchy)
+            {
+                Play("Menu");
+            }
         }
     }
 }

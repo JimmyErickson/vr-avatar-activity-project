@@ -7,7 +7,8 @@ using Microsoft.Azure.Kinect.BodyTracking;
 public class OpeningSceneManager : MonoBehaviour
 {
      
-    private List<string> poseKeys;
+    //private List<string> poseKeys;
+    private List<string> MenuKey;
     public GameObject guideAvatar;
     //private GameObject poseChangerGO;
     //PoseChanger poseChanger;
@@ -18,6 +19,10 @@ public class OpeningSceneManager : MonoBehaviour
     public Material green;
     public Material red;
     private float timer = 0;
+    public float timerMax;
+    public GameObject MenuUI;
+    private bool displayPose;
+    public float menuTimerMax;
     
 
 
@@ -27,16 +32,41 @@ public class OpeningSceneManager : MonoBehaviour
     {
         //poseChanger = poseChangerGO.AddComponent<PoseChanger>();
         //Debug.Log("Hello There");
+        displayPose = true;
         poseChanger.setPoseBody(poseChangerObject);
         poseChanger.LoadData();
         poseChanger.currentPose = 0;
         List<string> unfilteredPoseKeys = new List<string>(poseChanger.poses.Keys);
-        poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("TaiChi"));
+        MenuKey = unfilteredPoseKeys.FindAll(FindKey);
+        SceneManagerStuff.MenuUI = MenuUI;
+        SceneManagerStuff.menuTimerMax = menuTimerMax;
+        SceneManagerStuff.green = green;
+        SceneManagerStuff.red = red;
+        SceneManagerStuff.myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
+        SceneManagerStuff.scenePaths = SceneManagerStuff.myLoadedAssetBundle.GetAllScenePaths();
     }
+
+    private static bool FindKey(string item)
+    {
+
+        if (item.Contains("Menu"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        poseChanger.DisplayPoseRelative(poseKeys[poseChanger.currentPose]);
+        if (displayPose) {
+            poseChanger.DisplayPoseRelative(MenuKey[0]);
+        }
+        
+        Debug.Log(MenuKey[0]);
         guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
         
         int[] focusPoints = { (int)JointId.HandRight, (int)JointId.HandLeft, (int)JointId.ElbowRight, (int)JointId.ElbowLeft, (int)JointId.KneeRight, (int)JointId.KneeLeft, (int)JointId.FootRight, (int)JointId.FootLeft };
@@ -71,11 +101,24 @@ public class OpeningSceneManager : MonoBehaviour
                 parts[i].GetComponent<MeshRenderer>().material = red;
             }
         }
-        if (timer >= 3.0)
+        if (timer >= timerMax)
         {
             timer = 0;
             Debug.Log("Yay you did it!");
-            poseChanger.currentPose++;
+            displayPose = false;
+            SceneManagerStuff.MenuUI.SetActive(true);
         }
     }
+
+    
+}
+
+public static class SceneManagerStuff
+{
+    public static AssetBundle myLoadedAssetBundle;
+    public static string[] scenePaths;
+    public static GameObject MenuUI;
+    public static float menuTimerMax;
+    public static Material green;
+    public static Material red;
 }

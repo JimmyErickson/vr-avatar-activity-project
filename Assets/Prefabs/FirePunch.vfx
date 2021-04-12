@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.3549395501613617,"g":6.426187038421631,"b":16.948379516601564,"a":1.0},"time":0.029419394209980966},{"color":{"r":2.7521021366119386,"g":0.96539705991745,"b":0.12968020141124726,"a":1.0},"time":0.3147020637989044},{"color":{"r":1.21455979347229,"g":0.2607170343399048,"b":0.012717904523015023,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.0794079527258873},{"alpha":0.572549045085907,"time":0.6705882549285889},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.3549395501613617,"g":6.426187038421631,"b":16.948379516601564,"a":1.0},"time":0.029419394209980966},{"color":{"r":2.7521021366119386,"g":0.96539705991745,"b":0.12968020141124726,"a":1.0},"time":0.13823148608207704},{"color":{"r":1.21455979347229,"g":0.2607170343399048,"b":0.012717904523015023,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.0794079527258873},{"alpha":0.572549045085907,"time":0.6705882549285889},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -2212,7 +2212,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.3549395501613617,"g":6.426187038421631,"b":16.948379516601564,"a":1.0},"time":0.029419394209980966},{"color":{"r":2.7521021366119386,"g":0.96539705991745,"b":0.12968020141124726,"a":1.0},"time":0.3147020637989044},{"color":{"r":1.21455979347229,"g":0.2607170343399048,"b":0.012717904523015023,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.0794079527258873},{"alpha":0.572549045085907,"time":0.6705882549285889},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.3549395501613617,"g":6.426187038421631,"b":16.948379516601564,"a":1.0},"time":0.029419394209980966},{"color":{"r":2.7521021366119386,"g":0.96539705991745,"b":0.12968020141124726,"a":1.0},"time":0.13823148608207704},{"color":{"r":1.21455979347229,"g":0.2607170343399048,"b":0.012717904523015023,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":0.0,"time":0.0},{"alpha":1.0,"time":0.0794079527258873},{"alpha":0.572549045085907,"time":0.6705882549285889},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: o
