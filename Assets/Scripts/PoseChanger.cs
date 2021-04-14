@@ -212,4 +212,14 @@ public static class poseChanger
         PlayerBody.guidePos = examplePose;
         renderSkeleton(examplePose, 0);
     }
+
+}
+public static class SceneManagerStuff
+{
+    public static AssetBundle myLoadedAssetBundle;
+    public static string[] scenePaths;
+    public static GameObject MenuUI;
+    public static float menuTimerMax;
+    public static Material green;
+    public static Material red;
 }
