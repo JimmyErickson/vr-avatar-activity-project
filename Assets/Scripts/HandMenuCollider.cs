@@ -21,25 +21,24 @@ public class HandMenuCollider : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("Hit a menu");
-        other.GetComponent<MeshRenderer>().material = SceneManagerStuff.green;
+        // other.GetComponent<MeshRenderer>().material = SceneManagerStuff.green;
         //Debug.Log("Collision");
         timer += Time.deltaTime;
+        Debug.Log(timer);
         if (timer >= SceneManagerStuff.menuTimerMax)
         {
             timer = 0;
-            if (other.gameObject.name == "Tutorial")
+
+            Debug.Log("HERE IS THE NAME");
+            Debug.Log(other.gameObject.name);
+            if (other.gameObject.name == "Airbending")
             {
-                Debug.Log("Scene2 loading: " + SceneManagerStuff.scenePaths[0]);
-                SceneManager.LoadScene("Tutorial");
-            }
-            else if (other.gameObject.name == "Airbending")
-            {
-                Debug.Log("Scene2 loading: " + SceneManagerStuff.scenePaths[0]);
+                Debug.Log("Air");
                 SceneManager.LoadScene("Airbending");
             }
             else if (other.gameObject.name == "Firebending")
             {
-                Debug.Log("Scene2 loading: " + SceneManagerStuff.scenePaths[0]);
+                Debug.Log("Fire");
                 SceneManager.LoadScene("Firebending");
             }
             else if (other.gameObject.name == "Exit Menu")
@@ -54,8 +53,9 @@ public class HandMenuCollider : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        other.GetComponent<MeshRenderer>().material = SceneManagerStuff.red;
-        timer = 0;
+        // other.GetComponent<MeshRenderer>().material = SceneManagerStuff.red;
+        timer -= Time.deltaTime / 100;
+        Debug.Log("LEAVING NOW");
     }
 }
 

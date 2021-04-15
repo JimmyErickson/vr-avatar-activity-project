@@ -42,8 +42,8 @@ public class OpeningSceneManager : MonoBehaviour
         SceneManagerStuff.menuTimerMax = menuTimerMax;
         SceneManagerStuff.green = green;
         SceneManagerStuff.red = red;
-        SceneManagerStuff.myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/AssetBundles/scenes");
-        SceneManagerStuff.scenePaths = SceneManagerStuff.myLoadedAssetBundle.GetAllScenePaths();
+        //SceneManagerStuff.myLoadedAssetBundle = AssetBundle.LoadFromFile("C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Scenes");
+        //SceneManagerStuff.scenePaths = SceneManagerStuff.myLoadedAssetBundle.GetAllScenePaths();
     }
 
     private static bool FindKey(string item)
@@ -62,13 +62,18 @@ public class OpeningSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (displayPose) {
+        updatePoses();
+    }
+
+    void updatePoses()
+    {
+        if (displayPose)
+        {
             poseChanger.DisplayPoseRelative(MenuKey[0]);
         }
-        
-        Debug.Log(MenuKey[0]);
+
         guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
-        
+
         int[] focusPoints = { (int)JointId.HandRight, (int)JointId.HandLeft, (int)JointId.ElbowRight, (int)JointId.ElbowLeft, (int)JointId.KneeRight, (int)JointId.KneeLeft, (int)JointId.FootRight, (int)JointId.FootLeft };
         //float[] distances = new float[8];
         float count = 0;
@@ -104,21 +109,8 @@ public class OpeningSceneManager : MonoBehaviour
         if (timer >= timerMax)
         {
             timer = 0;
-            Debug.Log("Yay you did it!");
             displayPose = false;
             SceneManagerStuff.MenuUI.SetActive(true);
         }
-    }
-
-    
-}
-
-public static class SceneManagerStuff
-{
-    public static AssetBundle myLoadedAssetBundle;
-    public static string[] scenePaths;
-    public static GameObject MenuUI;
-    public static float menuTimerMax;
-    public static Material green;
-    public static Material red;
+    } 
 }
