@@ -15,20 +15,41 @@ public class FireFightSceneManager : MonoBehaviour
     public float timerMax;
     public VisualEffect rHandFlame;
     public VisualEffect lHandFlame;
-    public GameObject poseBody;
+    //public GameObject poseBody;
+    private List<string> filteredPoseKeys;
+    public GameObject poseChangerObject;
     // Start is called before the first frame update
     void Start()
     {
-        poseChanger.setPoseBody(poseBody);
+        rHandFlame.Stop();
+        lHandFlame.Stop();
+        poseChanger.setPoseBody(poseChangerObject);
+        //poseChanger.setPoseBody(poseBody);
         poseChanger.LoadData();
         poseChanger.currentPose = 0;
         List<string> unfilteredPoseKeys = new List<string>(poseChanger.poses.Keys);
-        poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("FireFight"));
+        filteredPoseKeys = unfilteredPoseKeys.FindAll(FindKey);
+        Debug.Log(filteredPoseKeys[0]);
+    }
+
+    private static bool FindKey(string item)
+    {
+
+        if (item.Contains("FireFight"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     void Update()
     {
+        
         CreatePoses();
+        poseChanger.DisplayPoseRelative(filteredPoseKeys[0]);
         CheckMoves();
     }
 
@@ -36,12 +57,12 @@ public class FireFightSceneManager : MonoBehaviour
     {
         System.Numerics.Vector3 playerPelvis = PlayerBody.playerPos.JointPositions3D[(int)JointId.Pelvis]; ;
         poseKeys = new List<string>(poseChanger.poses.Keys);
-        foreach (string poseKey in poseKeys)
+        foreach (string poseKey in filteredPoseKeys)
         {
             Body examplePose = new Body(poseChanger.poses[poseKey].Length);
             examplePose.JointPositions3D = poseChanger.poses[poseKey];
             examplePose.JointRotations = poseChanger.poseRotations[poseKey];
-            poseChanger.DisplayPoseRelative(poseKey);
+            //poseChanger.DisplayPoseRelative(poseKey);
             System.Numerics.Vector3 pelvis = examplePose.JointPositions3D[(int)JointId.Pelvis];
             System.Numerics.Vector3 diff = playerPelvis - pelvis;
             for (int i = 0; i < examplePose.JointPositions3D.Length; i++)
@@ -66,7 +87,7 @@ public class FireFightSceneManager : MonoBehaviour
         float count = 0;
         for (int i = 0; i < focusPoints.Length; i++)
         {
-            if (System.Numerics.Vector3.Distance(PlayerBody.playerPos.JointPositions3D[focusPoints[i]], PlayerBody.guidePos.JointPositions3D[focusPoints[i]]) < tolerance)
+            if (System.Numerics.Vector3.Distance(PlayerBody.playerPos.JointPositions3D[focusPoints[i]], firePoses[0].JointPositions3D[focusPoints[i]]) < tolerance)
             {
                 count++;
             }

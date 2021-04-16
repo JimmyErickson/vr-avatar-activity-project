@@ -74,6 +74,11 @@ public class OpeningSceneManager : MonoBehaviour
 
         guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
 
+        checkMenu();
+    } 
+
+    void checkMenu()
+    {
         int[] focusPoints = { (int)JointId.HandRight, (int)JointId.HandLeft, (int)JointId.ElbowRight, (int)JointId.ElbowLeft, (int)JointId.KneeRight, (int)JointId.KneeLeft, (int)JointId.FootRight, (int)JointId.FootLeft };
         //float[] distances = new float[8];
         float count = 0;
@@ -112,5 +117,5 @@ public class OpeningSceneManager : MonoBehaviour
             displayPose = false;
             SceneManagerStuff.MenuUI.SetActive(true);
         }
-    } 
+    }
 }

@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         // Persistent game object allows for seamless music, may want to remove if we want different music for each scene.
-        DontDestroyOnLoad(gameObject);
+       /* DontDestroyOnLoad(gameObject);
         if(instance == null)
         {
             instance = this;
@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
             return;
-        }
+        }*/
 
         foreach(Sound s in sounds)
         {

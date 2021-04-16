@@ -171,6 +171,23 @@ public static class poseChanger
         }
     }
 
+    public static void SetMenuBody(string menuKey)
+    {
+        Body examplePose = new Body(poses[menuKey].Length);
+        examplePose.JointPositions3D = poses[menuKey];
+        examplePose.JointRotations = poseRotations[menuKey];
+
+        System.Numerics.Vector3 playerPelvis = PlayerBody.playerPos.JointPositions3D[(int)JointId.Pelvis];
+        System.Numerics.Vector3 pelvis = examplePose.JointPositions3D[(int)JointId.Pelvis];
+        System.Numerics.Vector3 diff = playerPelvis - pelvis;
+        for (int i = 0; i < examplePose.JointPositions3D.Length; i++)
+        {
+            examplePose.JointPositions3D[i] = new System.Numerics.Vector3(examplePose.JointPositions3D[i].X + diff.X, examplePose.JointPositions3D[i].Y, examplePose.JointPositions3D[i].Z + diff.Z);
+        }
+
+        PlayerBody.menuPos = examplePose;
+    }
+
     public static void DisplayPoseRelative(string poseKey)
     {
 
