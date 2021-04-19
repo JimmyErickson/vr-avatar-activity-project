@@ -41,8 +41,9 @@ public class HandMenuCollider : MonoBehaviour
                 Debug.Log("Fire");
                 SceneManager.LoadScene("Firebending");
             }
-            else if (other.gameObject.name == "Exit Menu")
+            else if (other.gameObject.tag == "exitmenu")
             {
+                Debug.Log("Exited Menu");
                 SceneManagerStuff.MenuUI.SetActive(false);
             }
         }

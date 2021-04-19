@@ -89,6 +89,7 @@
     <Compile Include="Assets\Skybox\ColorSkies\Demo\Scripts\SkyboxChanger.cs" />
     <Compile Include="Assets\Scripts\comboManager.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Scene_Managers\FireBendingSceneManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Models\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />

@@ -9,6 +9,7 @@ TagManager:
   - punchBlock
   - FootOut
   - Collider
+  - exitmenu
   layers:
   - Default
   - TransparentFX

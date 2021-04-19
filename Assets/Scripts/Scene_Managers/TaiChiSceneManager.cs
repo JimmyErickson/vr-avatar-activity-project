@@ -38,12 +38,13 @@ public class TaiChiSceneManager : MonoBehaviour
         List<string> unfilteredPoseKeys = new List<string>(poseChanger.poses.Keys);
         filteredPoseKeys = unfilteredPoseKeys.FindAll(FindKey);
         poseChanger.currentPose = 0;
-        setMenuPose();
+        
         //poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("TaiChi"));
     }
     // Update is called once per frame
     void Update()
     {
+        setMenuPose();
         //Debug.Log(filteredPoseKeys[0]);
         poseChanger.DisplayPoseRelative(filteredPoseKeys[poseChanger.currentPose]);
         guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
@@ -54,13 +55,13 @@ public class TaiChiSceneManager : MonoBehaviour
 
     void setMenuPose()
     {
-        List<string> unfilteredMenuPoseKeys = new List<string>(poseChanger.poses.Keys);
-        List<string> menuKey = unfilteredMenuPoseKeys.FindAll(FindMenuKey);
-        poseChanger.SetMenuBody(menuKey[0]);
+        //List<string> unfilteredMenuPoseKeys = new List<string>(poseChanger.poses.Keys);
+        //List<string> menuKey = unfilteredMenuPoseKeys.FindAll(FindMenuKey);
+        poseChanger.SetMenuBody("MenuPose");
         //poseChanger.DisplayPoseRelative(menuKey[0], false);
     }
 
-    private static bool FindMenuKey(string item)
+    /*private static bool FindMenuKey(string item)
     {
 
         if (item.Contains("Menu"))
@@ -71,7 +72,7 @@ public class TaiChiSceneManager : MonoBehaviour
         {
             return false;
         }
-    }
+    }*/
 
     private static bool FindKey(string item)
     {
@@ -98,7 +99,7 @@ public class TaiChiSceneManager : MonoBehaviour
                 count++;
             }
         }
-
+        
         Transform[] parts = playerBody.GetComponentsInChildren<Transform>();
 
         if (count == 8)
@@ -150,7 +151,7 @@ public class TaiChiSceneManager : MonoBehaviour
                 count++;
             }
         }
-
+        
         Transform[] parts = playerBody.GetComponentsInChildren<Transform>();
 
         if (count == focusPoints.Length)

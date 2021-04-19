@@ -129,6 +129,7 @@ public class TrackerHandler : MonoBehaviour
         //Keep this, it's for saving poses.
         /*if (poseSaver.activeSelf)
         {
+            Debug.Log("Lookin' Good!");
             saveCurrentPose(skeleton);
             poseSaver.SetActive(false);
         }*/
