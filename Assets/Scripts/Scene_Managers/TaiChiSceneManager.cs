@@ -124,6 +124,8 @@ public class TaiChiSceneManager : MonoBehaviour
         {
             timer = 0;
             Debug.Log("Yay you did it!");
+            FindObjectOfType<AudioManager>().Play("GoodJob");
+
             if (poseChanger.currentPose == filteredPoseKeys.Count - 1)
             {
                 poseChanger.currentPose = 0;
