@@ -21,7 +21,7 @@ public class HandMenuCollider : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("Hit a menu");
-        // other.GetComponent<MeshRenderer>().material = SceneManagerStuff.green;
+        other.GetComponent<Image>().color() = Color.green;
         //Debug.Log("Collision");
         timer += Time.deltaTime;
         Debug.Log(timer);
