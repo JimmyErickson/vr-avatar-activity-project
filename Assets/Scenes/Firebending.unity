@@ -4743,8 +4743,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 224785966}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.size
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[0].loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[1].clip
@@ -4755,7 +4763,31 @@ PrefabInstance:
       value: GoodJob
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e37042db4eb068e448319db1788ed25f, type: 3}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b84a7c140d4cb51419de649342d762b4, type: 3}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[1].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[3].volume
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7381,7 +7413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1921051541
 ParticleSystemRenderer:
   serializedVersion: 6

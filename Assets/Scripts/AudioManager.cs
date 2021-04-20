@@ -48,17 +48,21 @@ public class AudioManager : MonoBehaviour
         string scene = SceneManager.GetActiveScene().name;
 
         Play("Theme");
+
         if (scene == "OpeningScene")
         {
             Play("Introduction");
-            /*if (pose == menu)
-            {
-                Play("Menu");
-            }*/
-            if (menu.activeInHierarchy)
-            {
-                Play("Menu");
-            }
+        } else if (scene == "Firebending")
+        {
+            Play("Tutorial");
+        } else if (scene == "Airbending")
+        {
+            Play("Tutorial");
+        }
+        
+        if (menu.activeInHierarchy)
+        {
+            Play("Menu");
         }
     }
 }

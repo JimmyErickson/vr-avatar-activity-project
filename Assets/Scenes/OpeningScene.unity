@@ -346,55 +346,63 @@ PrefabInstance:
       objectReference: {fileID: 1551350000}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.size
-      value: 8
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e80660bf5b714634fad0c33ea90eada3, type: 3}
+    - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: Introduction
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: e80660bf5b714634fad0c33ea90eada3, type: 3}
+      objectReference: {fileID: 8300000, guid: b84a7c140d4cb51419de649342d762b4, type: 3}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[1].name
-      value: Introduction
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b84a7c140d4cb51419de649342d762b4, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b1ce35b3599fab4aa48c5103afa80a7, type: 3}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[2].name
-      value: Menu
+      value: GoodJob
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: e37042db4eb068e448319db1788ed25f, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b1ce35b3599fab4aa48c5103afa80a7, type: 3}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[3].name
-      value: 0
+      value: GoodJob
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[4].clip
       value: 
-      objectReference: {fileID: 8300000, guid: d2b22c44d3436b747bcebdef7d2a6c06, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b1ce35b3599fab4aa48c5103afa80a7, type: 3}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[4].name
-      value: 1
+      value: GoodJob
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[5].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 1109ce2f4f84e934d9cfbc978a8aba5f, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b1ce35b3599fab4aa48c5103afa80a7, type: 3}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[5].name
-      value: 2
+      value: GoodJob
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[6].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 6f9dd672826cc3643a08541a0d42d631, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b1ce35b3599fab4aa48c5103afa80a7, type: 3}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[6].name
-      value: 3
+      value: GoodJob
       objectReference: {fileID: 0}
     - target: {fileID: 5039305454507432399, guid: 1381050653da758428904f46b9ebbeef, type: 3}
       propertyPath: sounds.Array.data[7].clip
