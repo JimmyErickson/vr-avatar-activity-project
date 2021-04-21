@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HandMenuCollider : MonoBehaviour
 {
@@ -15,13 +16,17 @@ public class HandMenuCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("Hit a menu");
-        other.GetComponent<Image>().color() = Color.green;
+        if (other.gameObject.name == "Airbending" || other.gameObject.name == "Firebending" || other.gameObject.tag == "exitmenu")
+        {
+            other.GetComponent<Image>().color = Color.green;
+        }
+
         //Debug.Log("Collision");
         timer += Time.deltaTime;
         Debug.Log(timer);
@@ -47,9 +52,9 @@ public class HandMenuCollider : MonoBehaviour
                 SceneManagerStuff.MenuUI.SetActive(false);
             }
         }
-        
 
-        
+
+
     }
 
     public void OnTriggerExit(Collider other)
@@ -57,6 +62,9 @@ public class HandMenuCollider : MonoBehaviour
         // other.GetComponent<MeshRenderer>().material = SceneManagerStuff.red;
         timer -= Time.deltaTime / 100;
         Debug.Log("LEAVING NOW");
+        if (other.gameObject.name == "Airbending" || other.gameObject.name == "Firebending" || other.gameObject.tag == "exitmenu")
+        {
+            other.GetComponent<Image>().color = Color.white;
+        }
     }
 }
-
