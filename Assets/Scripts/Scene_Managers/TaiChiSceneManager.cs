@@ -38,7 +38,8 @@ public class TaiChiSceneManager : MonoBehaviour
         List<string> unfilteredPoseKeys = new List<string>(poseChanger.poses.Keys);
         filteredPoseKeys = unfilteredPoseKeys.FindAll(FindKey);
         poseChanger.currentPose = 0;
-        
+        poseChanger.numberOfKeys = filteredPoseKeys.Count;
+
         //poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("TaiChi"));
     }
     // Update is called once per frame
@@ -127,7 +128,7 @@ public class TaiChiSceneManager : MonoBehaviour
             Debug.Log("Yay you did it!");
             FindObjectOfType<AudioManager>().Play("GoodJob");
 
-            if (poseChanger.currentPose == filteredPoseKeys.Count - 1)
+            if (poseChanger.currentPose == poseChanger.numberOfKeys - 1)
             {
                 poseChanger.currentPose = 0;
             }

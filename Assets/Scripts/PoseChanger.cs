@@ -20,6 +20,8 @@ public static class poseChanger
     public static Dictionary<string, System.Numerics.Vector3[]> poses { get; set; } = new Dictionary<string, System.Numerics.Vector3[]>();
     public static Dictionary<string, System.Numerics.Quaternion[]> poseRotations { get; set; } = new Dictionary<string, System.Numerics.Quaternion[]>();
 
+    public static int numberOfKeys;
+
     private static readonly string logPrefix = "DataParser: ";
     // Start is called before the first frame update
    

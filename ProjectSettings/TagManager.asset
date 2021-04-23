@@ -10,6 +10,7 @@ TagManager:
   - FootOut
   - Collider
   - exitmenu
+  - MenuButton
   layers:
   - Default
   - TransparentFX

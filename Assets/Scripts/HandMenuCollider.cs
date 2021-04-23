@@ -22,7 +22,7 @@ public class HandMenuCollider : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log("Hit a menu");
-        if (other.gameObject.name == "Airbending" || other.gameObject.name == "Firebending" || other.gameObject.tag == "exitmenu")
+        if (other.gameObject.tag == "MenuButton" )
         {
             other.GetComponent<Image>().color = Color.green;
         }
@@ -39,11 +39,15 @@ public class HandMenuCollider : MonoBehaviour
             if (other.gameObject.name == "Airbending")
             {
                 Debug.Log("Air");
+                SceneManagerStuff.MenuUI.SetActive(false);
+
                 SceneManager.LoadScene("Airbending");
             }
             else if (other.gameObject.name == "Firebending")
             {
                 Debug.Log("Fire");
+                SceneManagerStuff.MenuUI.SetActive(false);
+
                 SceneManager.LoadScene("Firebending");
             }
             else if (other.gameObject.tag == "exitmenu")
@@ -53,8 +57,17 @@ public class HandMenuCollider : MonoBehaviour
             }
             else if (other.gameObject.name == "SkipPose")
             {
+                if (poseChanger.currentPose == poseChanger.numberOfKeys - 1)
+                {
+                    poseChanger.currentPose = 0;
+                }
+                else
+                {
+                    poseChanger.currentPose++;
+                }
+                SceneManagerStuff.MenuUI.SetActive(false);
                 Debug.Log("Skip Pose");
-                poseChanger.currentPose++;
+                //poseChanger.currentPose++;
             }
         }
 
@@ -67,7 +80,7 @@ public class HandMenuCollider : MonoBehaviour
         // other.GetComponent<MeshRenderer>().material = SceneManagerStuff.red;
         timer -= Time.deltaTime / 100;
         Debug.Log("LEAVING NOW");
-        if (other.gameObject.name == "Airbending" || other.gameObject.name == "Firebending" || other.gameObject.tag == "exitmenu")
+        if (other.gameObject.tag == "MenuButton")
         {
             other.GetComponent<Image>().color = Color.white;
         }
