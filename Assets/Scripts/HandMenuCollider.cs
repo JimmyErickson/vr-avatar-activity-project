@@ -51,6 +51,11 @@ public class HandMenuCollider : MonoBehaviour
                 Debug.Log("Exited Menu");
                 SceneManagerStuff.MenuUI.SetActive(false);
             }
+            else if (other.gameObject.name == "SkipPose")
+            {
+                Debug.Log("Skip Pose");
+                poseChanger.currentPose++;
+            }
         }
 
 
