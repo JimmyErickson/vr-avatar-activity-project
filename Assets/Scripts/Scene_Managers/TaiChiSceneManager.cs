@@ -7,7 +7,7 @@ using Microsoft.Azure.Kinect.BodyTracking;
 public class TaiChiSceneManager : MonoBehaviour
 {
 
-    private List<string> poseKeys;
+    //private List<string> poseKeys;
     public GameObject guideAvatar;
     //private GameObject poseChangerGO;
     //PoseChanger poseChanger;
@@ -24,9 +24,10 @@ public class TaiChiSceneManager : MonoBehaviour
     public float menuTimerMax;
     //private string poseStringKey;
     private List<string> filteredPoseKeys;
+    public GameObject playerObject;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //poseChanger = poseChangerGO.AddComponent<PoseChanger>();
         //Debug.Log("Hello There");
@@ -39,6 +40,7 @@ public class TaiChiSceneManager : MonoBehaviour
         filteredPoseKeys = unfilteredPoseKeys.FindAll(FindKey);
         poseChanger.currentPose = 0;
         poseChanger.numberOfKeys = filteredPoseKeys.Count;
+        PlayerBody.playerObject = playerObject;
 
         //poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("TaiChi"));
     }

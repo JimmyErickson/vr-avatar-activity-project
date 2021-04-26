@@ -32,6 +32,8 @@ public static class poseChanger
 
     public static void LoadData()
     {
+        poses.Clear();
+        poseRotations.Clear();
         string filePath = "C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesFile.csv";
         LoadRotationData("C:/Users/vrcart01/Desktop/vr-avatar-activity-project/Assets/Poses/PosesRotationsFile.csv");
         Debug.Log(logPrefix + $"Trying to load {filePath}...");

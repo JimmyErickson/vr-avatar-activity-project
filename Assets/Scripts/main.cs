@@ -9,8 +9,9 @@ public class main : MonoBehaviour
     private BackgroundDataProvider m_backgroundDataProvider;
     public BackgroundData m_lastFrameData = new BackgroundData();
 
-    void Start()
+    void Awake()
     {
+        
         SkeletalTrackingProvider m_skeletalTrackingProvider = new SkeletalTrackingProvider();
 
         //tracker ids needed for when there are two trackers
@@ -21,12 +22,16 @@ public class main : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("1");
         if (m_backgroundDataProvider.IsRunning)
         {
+            Debug.Log("2");
             if (m_backgroundDataProvider.GetCurrentFrameData(ref m_lastFrameData))
             {
+                Debug.Log("3");
                 if (m_lastFrameData.NumOfBodies != 0)
                 {
+                    Debug.Log("4");
                     m_tracker.GetComponent<TrackerHandler>().updateTracker(m_lastFrameData);
                 }
             }

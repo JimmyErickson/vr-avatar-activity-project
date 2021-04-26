@@ -8,7 +8,7 @@ public class HandMenuCollider : MonoBehaviour
 {
     private static float timer;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         timer = 0;
     }
@@ -39,16 +39,18 @@ public class HandMenuCollider : MonoBehaviour
             if (other.gameObject.name == "Airbending")
             {
                 Debug.Log("Air");
+                PlayerBody.playerObject.SetActive(false);
                 SceneManagerStuff.MenuUI.SetActive(false);
 
-                SceneManager.LoadScene("Airbending");
+                SceneManager.LoadScene("Airbending", LoadSceneMode.Single);
             }
             else if (other.gameObject.name == "Firebending")
             {
                 Debug.Log("Fire");
+                PlayerBody.playerObject.SetActive(false);
                 SceneManagerStuff.MenuUI.SetActive(false);
 
-                SceneManager.LoadScene("Firebending");
+                SceneManager.LoadScene("Firebending", LoadSceneMode.Single);
             }
             else if (other.gameObject.tag == "exitmenu")
             {

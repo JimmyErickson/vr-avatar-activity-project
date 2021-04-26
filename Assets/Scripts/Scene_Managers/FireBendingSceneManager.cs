@@ -24,9 +24,10 @@ public class FireBendingSceneManager : MonoBehaviour
     public float menuTimerMax;
     //private string poseStringKey;
     private List<string> filteredPoseKeys;
+    public GameObject playerObject;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //poseChanger = poseChangerGO.AddComponent<PoseChanger>();
         //Debug.Log("Hello There");
@@ -38,6 +39,8 @@ public class FireBendingSceneManager : MonoBehaviour
         List<string> unfilteredPoseKeys = new List<string>(poseChanger.poses.Keys);
         filteredPoseKeys = unfilteredPoseKeys.FindAll(FindKey);
         poseChanger.currentPose = 0;
+        poseChanger.numberOfKeys = filteredPoseKeys.Count;
+        PlayerBody.playerObject = playerObject;
 
         //poseKeys = unfilteredPoseKeys.FindAll(item => unfilteredPoseKeys.Contains("TaiChi"));
     }

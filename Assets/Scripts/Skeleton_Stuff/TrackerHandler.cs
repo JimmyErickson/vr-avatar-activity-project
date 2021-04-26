@@ -281,6 +281,7 @@ public static class PlayerBody{
     public static Body playerPos;
     public static Body guidePos;
     public static Body menuPos;
+    public static GameObject playerObject;
 }
 
 public static class BodyReference{

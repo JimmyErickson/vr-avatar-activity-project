@@ -3293,9 +3293,10 @@ MonoBehaviour:
   tolerance: 0.3
   green: {fileID: 2100000, guid: a57167be094e5f3498f50de4d8d5d60f, type: 2}
   red: {fileID: 2100000, guid: bd6b6d11c48709d409751661caa7e006, type: 2}
-  timerMax: 3
+  timerMax: 2
   MenuUI: {fileID: 232078330}
-  menuTimerMax: 4
+  menuTimerMax: 0.015
+  playerObject: {fileID: 1479171216}
 --- !u!114 &1036723963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3320,7 +3321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71abc990c46f07c40ac230c12aa9636d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_tracker: {fileID: 0}
+  m_tracker: {fileID: 1465855652}
 --- !u!4 &1036723965
 Transform:
   m_ObjectHideFlags: 0
@@ -4518,6 +4519,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f36b57d675b1444cb2203b7a6cac6cb, type: 3}
+--- !u!1 &1465855652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 210279052, guid: 019b917704c3c29478d778e143d411d2, type: 3}
+  m_PrefabInstance: {fileID: 1869498946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1466129107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4588,7 +4594,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Airbending
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_RootOrder
@@ -4640,7 +4646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232078330, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 658386353, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Text
@@ -4682,9 +4688,17 @@ PrefabInstance:
       propertyPath: m_Text
       value: Skip Pose
       objectReference: {fileID: 0}
+    - target: {fileID: 1952036494, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2001016150, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Name
       value: SkipPose
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012749712888, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: doNotDestroy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3814753973451890475, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4712,6 +4726,11 @@ GameObject:
 --- !u!224 &1479171215 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 232078331, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 1479171213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1479171216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   m_PrefabInstance: {fileID: 1479171213}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1515152785 stripped
@@ -6085,7 +6104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210279052, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_Name
-      value: Kinect4AzureTracker
+      value: Kinect4AzureTrackerAirbending
       objectReference: {fileID: 0}
     - target: {fileID: 210279053, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_RootOrder
@@ -6097,7 +6116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 210279053, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: 7.349
       objectReference: {fileID: 0}
     - target: {fileID: 210279053, guid: 019b917704c3c29478d778e143d411d2, type: 3}
       propertyPath: m_LocalPosition.z
