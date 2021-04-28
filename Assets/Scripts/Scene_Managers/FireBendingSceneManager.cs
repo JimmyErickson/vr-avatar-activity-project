@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using Microsoft.Azure.Kinect.BodyTracking;
+using System;
 
 public class FireBendingSceneManager : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class FireBendingSceneManager : MonoBehaviour
     public GameObject playerObject;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         //poseChanger = poseChangerGO.AddComponent<PoseChanger>();
         //Debug.Log("Hello There");
@@ -47,12 +48,20 @@ public class FireBendingSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        setMenuPose();
-        //Debug.Log(filteredPoseKeys[0]);
-        poseChanger.DisplayPoseRelative(filteredPoseKeys[poseChanger.currentPose]);
-        guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
-        checkFullPose();
-        checkMenu();
+        try
+        {
+            setMenuPose();
+            //Debug.Log(filteredPoseKeys[0]);
+            poseChanger.DisplayPoseRelative(filteredPoseKeys[poseChanger.currentPose]);
+            guideAvatar.GetComponent<Animator>().SetInteger("animationState", poseChanger.currentPose);
+            checkFullPose();
+            checkMenu();
+        }
+        catch(NullReferenceException)
+        {
+            Debug.Log("oh well");
+        }
+        
 
     }
 
@@ -60,7 +69,14 @@ public class FireBendingSceneManager : MonoBehaviour
     {
         //List<string> unfilteredMenuPoseKeys = new List<string>(poseChanger.poses.Keys);
         //List<string> menuKey = unfilteredMenuPoseKeys.FindAll(FindMenuKey);
-        poseChanger.SetMenuBody("MenuPose");
+        try
+        {
+            poseChanger.SetMenuBody("MenuPose");
+        }
+        catch(NullReferenceException)
+        {
+            Debug.Log("oh well");
+        }
         //poseChanger.DisplayPoseRelative(menuKey[0], false);
     }
 

@@ -8,7 +8,7 @@ public class HandMenuCollider : MonoBehaviour
 {
     private static float timer;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         timer = 0;
     }

@@ -34,13 +34,13 @@ public class SkeletalTrackingProvider : BackgroundDataProvider
                     WiredSyncMode = WiredSyncMode.Standalone,
                 });
 
-                UnityEngine.Debug.Log("Open K4A device successful. id " + id + "sn:" + device.SerialNum );
+                Debug.Log("Open K4A device successful. id " + id + "sn:" + device.SerialNum );
 
                 var deviceCalibration = device.GetCalibration();
 
                 using (Tracker tracker = Tracker.Create(deviceCalibration, new TrackerConfiguration() { ProcessingMode = TrackerProcessingMode.Gpu, SensorOrientation = SensorOrientation.Default }))
                 {
-                    UnityEngine.Debug.Log("Body tracker created.");
+                    Debug.Log("Body tracker created.");
                     while (m_runBackgroundThread)
                     {
                         using (Capture sensorCapture = device.GetCapture())
@@ -54,7 +54,7 @@ public class SkeletalTrackingProvider : BackgroundDataProvider
                         {
                             if (frame == null)
                             {
-                                UnityEngine.Debug.Log("Pop result from tracker timeout!");
+                                Debug.Log("Pop result from tracker timeout!");
                             }
                             else
                             {
@@ -117,7 +117,7 @@ public class SkeletalTrackingProvider : BackgroundDataProvider
         }
         catch (Exception e)
         {
-            UnityEngine.Debug.LogError(e.Message);
+            Debug.Log(e.Message);
         }
     }
 }

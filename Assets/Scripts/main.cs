@@ -9,7 +9,7 @@ public class main : MonoBehaviour
     private BackgroundDataProvider m_backgroundDataProvider;
     public BackgroundData m_lastFrameData = new BackgroundData();
 
-    void Awake()
+    void Start()
     {
         
         SkeletalTrackingProvider m_skeletalTrackingProvider = new SkeletalTrackingProvider();

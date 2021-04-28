@@ -13,7 +13,7 @@ public class ConfigLoader : MonoBehaviour
             Instance = this;
         }
 
-        LoadDemoSceneSetup();
+        //LoadDemoSceneSetup();
     }
 
     // Name of scene config file.
